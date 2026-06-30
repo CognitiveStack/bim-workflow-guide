@@ -1,64 +1,139 @@
-# 08 — Revit 3D Workflow Diagram Plan (Phase 2)
+# 08 — Revit 3D Workflow Diagram: Build Runbook
 
-## What this topic means
+> This repo holds the **instructions and documentation**. The Revit model itself is **not** stored here — it lives in the Autodesk project area (see below) and is built via the pyRevit MCP server.
 
-This is a **plan**, not a built feature. It describes a future goal: recreating the BIM coordination workflow as a **3D teaching diagram inside Revit**, so the workflow can be explored spatially rather than only read as text or a flat Mermaid chart.
+## What this is
 
-The 3D model will be built later using the **Revit MCP server**.
+A step-by-step runbook for recreating the BIM coordination workflow as a **3D teaching diagram in Revit**, built programmatically through the **pyRevit MCP server** (`revit-triviron`). The 3D model is the first module (`Module_00`) in a BIM Coordination Workflow Atlas.
 
-## Why it matters
+It is a **modernized, de-branded** retelling of a well-known 2019 contractor coordination infographic (Turner / White Plains Hospital), updated to current Autodesk Forma / Construction Cloud terminology and a cloud-first (CDE-centric) mental model.
 
-A flowchart shows *order*. A 3D model shows *structure and relationships* — discipline streams flowing into a central federated model, looping through issue resolution, and moving out to construction and handover. For workshops and Triviron presentations, a navigable 3D diagram is far more memorable than a flat image, and it doubles as a demonstration of Revit MCP automation.
+A flowchart shows *order*; the 3D model shows *structure and relationships* — discipline streams flowing through a shared Common Data Environment into a central federated model, looping through issue resolution, and moving out to construction and handover.
 
-## Where it fits in the workflow
+## Where the files live
 
-This corresponds to **Phase 4** of the roadmap (see `PRD.md`). It depends on:
-- the workflow narrative being settled (Phases 1–2 docs), and
-- the Revit MCP server being available for automated placement.
+| Artifact | Location |
+|---|---|
+| **Build instructions & docs** (this file) | This repo |
+| **Build prompt** (paste into Claude Desktop) | `docs/08-revit-build-prompt.md` |
+| **Revit model (`.rvt`)** | `C:\Users\charles\Documents\Autodesk\projects\bim-coordination-workflow-atlas\rvt\current\BIM_Coordination_Workflow_Atlas_Module_00.rvt` |
+| **Reference images** | `C:\Users\charles\Documents\Autodesk\projects\bim-clash-visual-atlas\images\revit-kid-bim-workflow-diag\` |
+| **Exported view images** | Re-imported into this repo under `diagrams/` once captured |
 
-## Planned model contents
+## Modernized terminology (de-branded)
 
-The Revit model should include:
+This is the canonical term list. Keep it consistent across the model, the Mermaid diagram, and the docs.
 
-**Colored discipline streams** (each a distinct color):
-- Architecture block
-- Structure block
-- Mechanical block
-- Electrical block
-- Plumbing block
-- Fire protection block
-- Civil / site block
+| Original (2019) | Modernized term used here |
+|---|---|
+| "Turner" ribbon ⑤ | **Common Data Environment** (the cloud backbone / spine) |
+| GC / Construction Manager carrying models | A *legacy* role flow — explained in docs, not drawn as the spine |
+| "Consolidated Model (Navisworks / IFC)" ⑧ | **Federated Model** (a.k.a. Consolidated Model) |
+| "3D Design Model" ③ | **Coordinated Design Model** |
+| "Source Models" ⑩ | **Discipline Models** |
+| "Revit, Tekla, CAD, etc…" | **Authoring Tools (Revit, Civil 3D, …)** |
+| coordination / clash step | **Model Coordination** (cloud) *or* **Navisworks Manage** (desktop) |
+| design model exchange | **Design Collaboration** |
+| "Design Changes" loop 8.2 | **Design Change Loop** |
+| "Shop Drawing / Model Changes" loop 8.1 | **Issue & Update Loop** |
+| project name / brand / date | removed |
 
-**Central coordination structure:**
-- Central **federated model** block (where streams converge)
-- **Forma Model Coordination** zone
-- **Navisworks** coordination zone
-- **Issue resolution loop** (feedback from coordination back to disciplines)
+### Disciplines (7 streams)
 
-**Downstream:**
-- **Construction** zone
-- **Owner handover** zone
+Architectural, Structural, Mechanical, Electrical, Plumbing, Fire Protection, Civil.
+*(Landscape and Penthouse dropped.)*
 
-**Annotation:**
-- **Numbered callouts** matching the workflow steps in the README, so the 3D model and the written explanation stay in sync.
+### Discipline colors (keep consistent across all Atlas modules)
 
-## Typical tools involved
+| Discipline | Color |
+|---|---|
+| Architectural | Tan / gold |
+| Structural | Violet / light purple |
+| Mechanical | Orange |
+| Electrical | Yellow |
+| Plumbing | Cyan / light blue |
+| Fire Protection | Red |
+| Civil | Green |
+| **CDE backbone** | **Strong blue** |
+| Federated Model stack | all seven discipline colors together |
 
-- **Revit** — host for the 3D diagram.
-- **Revit MCP server** (pyRevit-based) — programmatic placement of blocks, colors, zones, and callouts.
-- This repo — the source narrative the model must match.
+> The CDE backbone takes the strong blue so no discipline uses blue (avoids confusion with the spine).
 
-## Simple example
+## The CDE backbone concept (callout ⑤)
 
-A presenter opens the Revit model in a workshop. Seven colored streams (one per discipline) flow toward a glowing **central federated block**. Numbered callout **8** sits on the **clash detection** zone; a looping arrow (callout **10**) returns from issue resolution back to the discipline streams. The presenter walks the room through the same numbers used in the README — first in text, then in 3D.
+In the 2019 original, a single contractor "carried" models from design into construction coordination. In a modern Forma workflow there is no single party carrying models — **everything publishes to and pulls from the cloud**. So callout ⑤ becomes the **Common Data Environment**: a strong-blue spine running through the middle of the diagram, with **Design Collaboration** and **Model Coordination** sitting *on* it. A small **BIM Coordinator** role-marker sits near the Federated Model (the human stays, the platform is the star).
 
-## Build notes (for later)
+The older **General Contractor / Construction Manager**-led flow is still common in practice; it is explained in the docs referenced at ⑤ rather than drawn as the backbone.
 
-- Keep block naming and callout numbers identical to the README stages.
-- Use one consistent color per discipline across all CogStack material.
-- Generate via Revit MCP so the model is reproducible, not hand-placed.
-- Treat the simplified Mermaid diagram as the canonical layout reference.
+## Prerequisites
+
+- Revit is open with the **pyRevit MCP server** connected.
+- The MCP exposes (at minimum): `get_revit_status`, `get_revit_model_info`, `list_levels`, `list_views`, `place_family`, `execute_revit_code`, `get_revit_view` / `list_revit_views`, `color_splash` / `clear_colors`.
+- Driven from either a Claude Desktop session (better for pasting reference images and iterating visually) or Claude Code — both can reach the same MCP.
+
+## Build sequence
+
+Run in order; save + screenshot after each milestone.
+
+### 1. Verify connection and active document
+- `get_revit_status` → confirm Revit is responding.
+- `get_revit_model_info` → confirm the active document.
+- If none suitable, create a new project from a generic metric template, then save to the canonical path before continuing.
+
+### 2. Units and levels
+- Set units to **millimetres**.
+- Create a single level **"Workflow"** if needed.
+
+### 3. Geometry layout (left → right along +X; streams along Y; stacking +Z)
+
+**Zones** (with 3D model-text labels above each): **DESIGN** (X 0–8000), **CONSTRUCTION** (X 8000–20000), **OPERATION** (X 20000–28000).
+
+**DESIGN zone:**
+- 7 colored input streams entering from the left, stacked along Y, each ending in a +X arrowhead, labeled: Architectural, Structural, Mechanical, Electrical, Plumbing, Fire Protection, Civil.
+- A **Coordinated Design Model** cluster (callouts ① ③) where streams converge (~X 6000).
+
+**CDE backbone (callout ⑤):**
+- A **strong-blue spine** running ~X 7000 → 20000 through the middle, labeled **"Common Data Environment"**.
+- **Design Collaboration** marker on the design side of the spine; **Model Coordination** marker near the Federated Model. Note Navisworks Manage as an alternative on the Model Coordination marker.
+
+**CONSTRUCTION zone:**
+- Steel / penetrations branch (callouts 4.1 underground coordination, 4.2 penetrations & fabrication).
+- Trade model inputs feeding up onto the spine (callouts 6, 7).
+- Central **Federated Model** block (callout ⑧): a tall stack of all seven discipline colors at ~X 18000, labeled "Federated Model (Model Coordination / Navisworks)".
+- Small **BIM Coordinator** role-marker beside it.
+
+**OPERATION zone:**
+- 3×3 grid of small **Discipline Models** cubes (callout ⑩).
+- Assembled **Federated Model** block (callout ⑨, ~X 24000).
+
+**Feedback loops (dashed):**
+- Top: **Design Change Loop** (8.2) — federation back to DESIGN.
+- Bottom: **Issue & Update Loop** (8.1) — operation back to the trade models.
+
+### 4. Numbered callouts
+Place markers for: 1, 2, 3, 4.1, 4.2, 5, 6, 7, 8, 8.1, 8.2, 9, 10 — positions matching the reference. Numbers must match the written workflow docs.
+
+### 5. Views, sheet, labels
+- A default 3D view + a key isometric framing the whole diagram.
+- One presentation sheet with the views, a title block, a discipline color legend, and the callout key.
+
+### 6. Save and export
+- Save the `.rvt` to the canonical path.
+- Capture views with `get_revit_view`, export images, re-import into this repo's `diagrams/`.
+
+## How this connects back to the repo
+
+- The **Mermaid diagram stays** as the lightweight, GitHub-renderable inline view.
+- The **exported Revit images** become the richer 3D illustration, embedded alongside the Mermaid diagram — a complement, not a replacement.
+- Keep block names, colors, and callout numbers aligned across: the README stages, the Mermaid diagram, and this Revit model.
+
+## Build notes
+
+- Generate everything via the MCP so the model is **reproducible**, not hand-placed.
+- Wrap all model changes in transactions inside `execute_revit_code`.
+- Start blocky (boxes + arrowheads + 3D model text); refine visually once the layout reads correctly.
+- Commit only instructions/docs/exported images to this repo — never the `.rvt`.
 
 ---
 
-*Status: planned. Nothing in this document is built yet.*
+*Status: runbook ready, terminology modernized and de-branded. The model is built externally via the pyRevit MCP and stored in the Autodesk project area. Paste-ready prompt in [`08-revit-build-prompt.md`](08-revit-build-prompt.md).*
