@@ -4,6 +4,7 @@ Educational documentation for the **Autodesk BIM Coordination Workflow**. Start 
 
 ## Start here
 
+- [Origin Story](origin-story.md) — a first-person account of how and why I built and modernized this
 - [Workflow Overview (BIM-001)](workflow-overview.md) — the main diagram explained
 - [Coordination Feedback Loop](coordination-feedback-loop.md) — why coordination is a loop, not a pipeline
 - [BIM Workflow Overview](01-bim-workflow-overview.md) — background: why clash detection is not the whole workflow

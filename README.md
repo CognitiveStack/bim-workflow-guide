@@ -66,6 +66,7 @@ The **Common Data Environment (CDE)** is the backbone — the controlled place w
 
 **Start here**
 - [Documentation index](docs/index.md)
+- [Origin Story — how I built and modernized this](docs/origin-story.md)
 - [Workflow Overview (BIM-001)](docs/workflow-overview.md)
 - [Coordination Feedback Loop](docs/coordination-feedback-loop.md)
 
