@@ -1,8 +1,10 @@
 # 09 — The Coordination Workflow Diagram Explained
 
-This is the central teaching diagram for the repo: a modernized, de-branded view of how a BIM coordination workflow runs on a cloud Common Data Environment. It was built as 3D geometry in Revit (via the pyRevit MCP — see [08](08-revit-3d-workflow-diagram-plan.md)) and exported for the web.
+This is the central teaching diagram for the repo: a modernized view of how a BIM coordination workflow runs on a cloud Common Data Environment. It was built as 3D geometry in Revit (via the pyRevit MCP — see [08](08-revit-3d-workflow-diagram-plan.md)) and exported for the web. The original contractor branding has been removed.
 
 ![Autodesk Coordination Workflow](../diagrams/revit/exports/AD-Coordination-Workflow-v05.png)
+
+> **Why "Autodesk Coordination Workflow"?** The original contractor branding (Turner / White Plains Hospital) has been removed, but the title deliberately keeps *Autodesk*: the two cloud drivers in the diagram — **Design Collaboration** (callout 2) and **Model Coordination** (callout 5) — are Autodesk Forma products. That doesn't lock out open standards — models in **IFC** format (e.g. from Tekla) still interoperate — the point is that the *cloud coordination process itself* is Autodesk-driven.
 
 ## How to read it
 
@@ -51,7 +53,7 @@ Coordination is iterative. Two loops carry problems back to whoever can fix them
 - **RFI loop (design side).** When coordination raises a question that needs a design decision, a **Request For Information (RFI)** goes back to the consultants. They make the **design change** and republish via Design Collaboration.
 - **ISSUES loop (construction side).** Clashes found by Model Coordination become **Issues** assigned to the responsible trade. The trade **updates its model** and republishes. This is the core day-to-day coordination cycle.
 
-## Terminology (de-branded, modernized)
+## Terminology (modernized, contractor-neutral)
 
 | Term in the diagram | What it means |
 |---|---|

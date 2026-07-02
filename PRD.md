@@ -54,7 +54,7 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 - ✅ `docs/08-revit-3d-workflow-diagram-plan.md` (full first version)
 
 **Diagrams**
-- ✅ `diagrams/revit/exports/AD-Coordination-Workflow-v05.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, de-branded, with RFI + ISSUES loops) — the primary workflow illustration
+- ✅ `diagrams/revit/exports/AD-Coordination-Workflow-v05.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, contractor-neutral, with RFI + ISSUES loops) — the primary workflow illustration
 - ✅ `docs/09-coordination-workflow-diagram.md` (embeds the 3D diagram and explains the 6 callouts + both loops)
 
 **Structure**

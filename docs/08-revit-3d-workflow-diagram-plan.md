@@ -6,7 +6,7 @@
 
 A step-by-step runbook for recreating the BIM coordination workflow as a **3D teaching diagram in Revit**, built programmatically through the **pyRevit MCP server** (`revit-triviron`). The 3D model is the first module (`Module_00`) in a BIM Coordination Workflow Atlas.
 
-It is a **modernized, de-branded** retelling of a well-known 2019 contractor coordination infographic (Turner / White Plains Hospital), updated to current Autodesk Forma / Construction Cloud terminology and a cloud-first (CDE-centric) mental model.
+It is a **modernized** retelling of a well-known 2019 contractor coordination infographic (Turner / White Plains Hospital) — with that contractor/project branding removed — updated to current Autodesk Forma / Construction Cloud terminology and a cloud-first (CDE-centric) mental model. Autodesk product names are kept intentionally: the cloud drivers (Design Collaboration, Model Coordination) are Autodesk Forma products, while open standards such as IFC (e.g. Tekla) still interoperate.
 
 A flowchart shows *order*; the 3D model shows *structure and relationships* — discipline streams flowing through a shared Common Data Environment into a central federated model, looping through issue resolution, and moving out to construction and handover.
 
@@ -20,7 +20,7 @@ A flowchart shows *order*; the 3D model shows *structure and relationships* — 
 | **Reference images** | `C:\Users\charles\Documents\Autodesk\projects\bim-clash-visual-atlas\images\revit-kid-bim-workflow-diag\` |
 | **Exported view images** | Re-imported into this repo under `diagrams/` once captured |
 
-## Modernized terminology (de-branded)
+## Modernized terminology (contractor-neutral)
 
 This is the canonical term list. Keep it consistent across the model and the docs.
 
@@ -135,4 +135,4 @@ Place markers for: 1, 2, 3, 4.1, 4.2, 5, 6, 7, 8, 8.1, 8.2, 9, 10 — positions 
 
 ---
 
-*Status: runbook ready, terminology modernized and de-branded. The model is built externally via the pyRevit MCP and stored in the Autodesk project area. Paste-ready prompt in [`08-revit-build-prompt.md`](08-revit-build-prompt.md).*
+*Status: runbook ready; terminology modernized and contractor branding removed (Autodesk product names kept intentionally). The model is built externally via the pyRevit MCP and stored in the Autodesk project area. Paste-ready prompt in [`08-revit-build-prompt.md`](08-revit-build-prompt.md).*

@@ -5,17 +5,19 @@
 ```text
 You are helping me build a 3D "teaching diagram" in Autodesk Revit using the
 pyRevit MCP server. I have just pasted a reference image — a 2019 isometric BIM
-coordination workflow infographic. I want a MODERNIZED, DE-BRANDED, simplified
-"kid-friendly" version of this layout as real 3D geometry. This is Module_00 of
-my "BIM Coordination Workflow Atlas".
+coordination workflow infographic. I want a MODERNIZED, CONTRACTOR-NEUTRAL,
+simplified "kid-friendly" version of this layout as real 3D geometry. This is
+Module_00 of my "BIM Coordination Workflow Atlas".
 
 == SAVE LOCATION ==
 Save the Revit model to:
 C:\Users\charles\Documents\Autodesk\projects\bim-coordination-workflow-atlas\rvt\current\BIM_Coordination_Workflow_Atlas_Module_00.rvt
 (create folders if needed). Do NOT save anywhere else.
 
-== MODERNIZE / DE-BRAND (important) ==
-- Remove ALL branding: no "Turner", no project name, no logo, no draft date.
+== MODERNIZE / CONTRACTOR-NEUTRAL (important) ==
+- Remove CONTRACTOR branding: no "Turner", no project name, no logo, no draft
+  date. KEEP Autodesk product names (Design Collaboration, Model Coordination) —
+  the diagram may be titled "Autodesk Coordination Workflow".
 - The big blue ribbon in the image becomes the COMMON DATA ENVIRONMENT — a
   strong-blue spine running through the middle. Label it in full:
   "Common Data Environment".
