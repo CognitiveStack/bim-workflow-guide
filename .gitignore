@@ -1,0 +1,20 @@
+# Autodesk binaries — not versioned in Git (see docs/versioning-and-exports.md)
+# The repo versions exported PNG/PDF diagrams and Markdown docs, not source models.
+*.rvt
+*.rte
+*.rfa
+*.rft
+*.nwc
+*.nwf
+*.nwd
+*.dwg
+*.ifc
+
+# Revit backups
+*.0001.rvt
+*.0002.rvt
+*_backup/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

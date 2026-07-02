@@ -10,4 +10,4 @@ Planned contents:
 - Before/after resolution patterns.
 - How each clash becomes a tracked issue.
 
-See [04 — Clash Detection](../../docs/04-clash-detection.md) and the [Glossary](../../docs/glossary.md).
+See [Model Coordination](../../docs/callouts/05-model-coordination.md), [Non-Obvious Coordination Risks](../../docs/coordination-risks/non-obvious-clashes.md), and the [Glossary](../../docs/glossary.md).

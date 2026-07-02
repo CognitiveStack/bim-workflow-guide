@@ -36,12 +36,12 @@ This overview is the **map for the whole repo**. Every other document zooms into
 
 | Stage | Where to read more |
 |---|---|
-| Federated model | `02-federated-models.md` |
-| MEP coordination | `03-mep-coordination.md` |
-| Clash detection | `04-clash-detection.md` |
-| Cloud coordination (Forma) | `05-forma-model-coordination.md` |
-| Navisworks coordination | `06-navisworks-workflow.md` |
-| Automation (Revit MCP) | `07-revit-mcp-automation.md` |
+| The main diagram, explained | [workflow-overview.md](workflow-overview.md) |
+| Federated model | [callouts/06-federated-model.md](callouts/06-federated-model.md) |
+| Clash detection / model coordination | [callouts/05-model-coordination.md](callouts/05-model-coordination.md) |
+| Cloud coordination (Forma) | [forma-model-coordination.md](forma-model-coordination.md) |
+| Navisworks coordination | [revit-to-navisworks-workflow.md](revit-to-navisworks-workflow.md) |
+| RFI + Issues loops | [coordination-feedback-loop.md](coordination-feedback-loop.md) |
 
 ## Typical tools involved
 
@@ -84,4 +84,4 @@ That whole story — not just the duct-versus-beam check — is the BIM workflow
 
 ---
 
-*Next: [02 — Federated Models](02-federated-models.md). New to the terms? See the [Glossary](glossary.md).*
+*Next: [Workflow Overview](workflow-overview.md) — the main diagram explained. New to the terms? See the [Glossary](glossary.md).*
