@@ -2,21 +2,29 @@
 
 This repo documents a modern **Autodesk-focused BIM coordination workflow** using Revit, Forma / ACC, Design Collaboration, Model Coordination, Navisworks, Issues, RFIs, and federated model handover.
 
-## Purpose
+## How this started
 
-The project explains how BIM coordination moves from static drawing handoff toward a **cloud-based, iterative coordination workflow**.
+I built this to teach myself — and then others — how a modern BIM coordination workflow actually fits together. Too often "BIM coordination" is used as if it only means clash detection; I wanted one picture that shows the whole thing, from design through construction to operation, with the cloud running through all of it.
 
-It uses a **Revit-generated 3D diagram** as the primary visual explanation:
+The spark was a diagram by **Jeffrey Pinheiro — The Revit Kid** — from his video ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s):
 
-> **Revit produces the diagram. Markdown explains the diagram. GitHub versions the learning system.**
+![The diagram that inspired this project — by The Revit Kid](diagrams/inspiration/revit-kid-bim-coordination-workflow-original.png)
+
+*Original diagram by Jeffrey Pinheiro (The Revit Kid), using Turner's White Plains Hospital project as the worked example. [Full credit](diagrams/inspiration/README.md).*
+
+In his diagram, the blue **"Turner"** spine is the Construction Manager / General Contractor — the hub everything flows through. What struck me is that in a modern cloud workflow **that spine is replaced by the cloud itself**. So I rebuilt it: the spine became the **Common Data Environment**, made Autodesk-centric by the two blue **Forma** workflows sitting on it — **Design Collaboration** and **Model Coordination** (Forma was formerly ACC). And because my Revit skills are modest, I built the 3D model with the [pyRevit MCP server](https://github.com/CognitiveStack/revit-mcp-server).
+
+👉 **Read the full story:** [docs/origin-story.md](docs/origin-story.md)
+
+> *Revit produces the diagram. Markdown explains the diagram. GitHub versions the learning system.*
 
 ---
 
-## Main diagram
+## The result — Autodesk Coordination Workflow
 
 ![Autodesk Coordination Workflow](diagrams/revit/exports/ad-coordination-workflow-v05.png)
 
-*Autodesk Coordination Workflow — Revit-generated 3D teaching diagram showing consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model.*
+*Autodesk Coordination Workflow — my Revit-generated 3D teaching diagram: consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model.*
 
 Full explanation: **[docs/workflow-overview.md](docs/workflow-overview.md)**.
 
