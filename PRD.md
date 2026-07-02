@@ -6,7 +6,7 @@ The **CogStack BIM Coordination Workflow** repository is an educational source-o
 
 The core value proposition is correcting a common misconception: **clash detection is not the whole BIM workflow** — it is one activity inside a much wider coordination process. By laying out the full hierarchy clearly, the repo gives learners a mental model they can build on.
 
-The MVP goal is a clean, reviewable first version of the repository: a beginner can open the README, understand the end-to-end workflow, see it rendered as a Mermaid diagram, and follow links into detailed topic docs. The repo also acts as the foundation for future CogStack BIM automation work (Revit MCP, Forma MCP, Revit template-as-code) and Triviron presentation material.
+The MVP goal is a clean, reviewable first version of the repository: a beginner can open the README, understand the end-to-end workflow, see it as a 3D coordination diagram, and follow links into detailed topic docs. The repo also acts as the foundation for future CogStack BIM automation work (Revit MCP, Forma MCP, Revit template-as-code) and Triviron presentation material.
 
 ## 2. Mission
 
@@ -54,8 +54,7 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 - ✅ `docs/08-revit-3d-workflow-diagram-plan.md` (full first version)
 
 **Diagrams**
-- ✅ `diagrams/simplified-bim-coordination-workflow.mmd` (original Mermaid flowchart, renders on GitHub)
-- ✅ `diagrams/revit/exports/AD-Coordination-Workflow-v05.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, de-branded, with RFI + ISSUES loops)
+- ✅ `diagrams/revit/exports/AD-Coordination-Workflow-v05.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, de-branded, with RFI + ISSUES loops) — the primary workflow illustration
 - ✅ `docs/09-coordination-workflow-diagram.md` (embeds the 3D diagram and explains the 6 callouts + both loops)
 
 **Structure**
@@ -64,7 +63,6 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 ### Out of Scope (Future Phases)
 
 - ❌ Fully written versions of all detailed topic docs (02–07) — stubs only in MVP
-- ❌ Detailed/tool-map diagrams beyond the simplified flowchart
 - ❌ Completed worked examples (Harrismith Fire Station, BIM Clash Visual Atlas) — placeholders only
 - ✅ The Revit MCP-generated 3D teaching model — **Module 00 built** (`AD-Coordination-Workflow-v05`); further modules still out of scope
 - ❌ Website or slide-deck rendering
@@ -88,7 +86,7 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
    - *Example:* A developer reads `08-revit-3d-workflow-diagram-plan.md` and scopes the build.
 
 6. **As a reader**, I want the workflow shown as a diagram, so that I can grasp it visually.
-   - *Example:* The Mermaid flowchart renders directly on the GitHub README.
+   - *Example:* The 3D coordination diagram displays directly on the GitHub README.
 
 7. **As a CogStack contributor**, I want links to related repos, so that I can navigate the wider BIM automation ecosystem.
    - *Example:* A contributor jumps from this repo to the Revit MCP server repo.
@@ -114,9 +112,7 @@ cogstack-bim-coordination-workflow/
 │   ├── 08-revit-3d-workflow-diagram-plan.md
 │   └── glossary.md
 ├── diagrams/
-│   ├── simplified-bim-coordination-workflow.mmd
-│   ├── detailed-bim-coordination-workflow.mmd
-│   └── tool-map.mmd
+│   └── revit/exports/AD-Coordination-Workflow-v05.png
 ├── examples/
 │   ├── harrismith-fire-station/README.md
 │   └── bim-clash-visual-atlas/README.md
@@ -128,7 +124,7 @@ cogstack-bim-coordination-workflow/
 **Design patterns:**
 - **Numbered docs** establish a reading order.
 - **Consistent doc template** — every topic doc opens with: what it means, why it matters, where it fits, typical tools, simple AEC example.
-- **Original diagrams** authored in Mermaid (`.mmd`), GitHub-renderable.
+- **Original diagrams** — the coordination diagram is built as 3D geometry in Revit and exported as PNG for the web.
 - **Separation of concerns** — concepts in `docs/`, visuals in `diagrams/`, applied cases in `examples/`, external pointers in `links/`.
 
 ## 7. Tools / Features (Content Modules)
@@ -145,7 +141,7 @@ cogstack-bim-coordination-workflow/
 | `07-revit-mcp-automation` (stub) | pyRevit MCP / Revit MCP automation |
 | `08-revit-3d-workflow-diagram-plan` | Plan for a 3D teaching diagram built in Revit |
 | `glossary` | Plain definitions of key BIM terms |
-| `diagrams/` | Original Mermaid workflow + tool-map diagrams |
+| `diagrams/` | Exported 3D coordination diagram (built in Revit) |
 | `examples/` | Worked AEC examples (placeholders in MVP) |
 | `links/` | Related CogStack repos and learning resources |
 
@@ -154,7 +150,7 @@ cogstack-bim-coordination-workflow/
 ## 8. Technology Stack
 
 - **Format:** Markdown (`.md`) for all documentation
-- **Diagrams:** Mermaid (`.mmd`), rendered natively by GitHub
+- **Diagrams:** 3D model built in Revit (via pyRevit MCP), exported as PNG
 - **Source control:** Git / GitHub
 - **No build system, runtime, or dependencies** for the MVP
 - **Future (out of MVP):** Revit MCP server, Forma MCP server, pyRevit — for the Phase 2 3D teaching model
@@ -162,7 +158,7 @@ cogstack-bim-coordination-workflow/
 ## 9. Security & Configuration
 
 - **Authentication/authorization:** None required — public educational content.
-- **Configuration:** None — static Markdown and Mermaid files.
+- **Configuration:** None — static Markdown files and exported images.
 - **Security scope:**
   - In scope: ✅ Ensure no proprietary/branded diagrams or copyrighted material are copied; all content original.
   - Out of scope: ❌ Application security, secrets, access control (no software in MVP).
@@ -177,7 +173,7 @@ Not applicable for the MVP — this is a documentation repository with no API su
 The repo is successful when:
 
 - ✅ A beginner can open the README and understand the BIM coordination workflow.
-- ✅ The Mermaid diagram renders correctly on GitHub.
+- ✅ The 3D coordination diagram displays correctly on GitHub.
 - ✅ The repo clearly explains how a federated model fits into coordination.
 - ✅ The repo distinguishes BIM coordination vs. MEP coordination vs. clash detection.
 - ✅ The docs are structured enough to become a future website page or slide deck.
@@ -191,15 +187,14 @@ The repo is successful when:
 **Goal:** Clean, reviewable first version of the repo.
 - ✅ Create full directory/file structure
 - ✅ Write README, PRD, `01-bim-workflow-overview`, `glossary`, `links/related-repos`, `08-revit-3d-workflow-diagram-plan`
-- ✅ Author `diagrams/simplified-bim-coordination-workflow.mmd`
-- **Validation:** README renders with working diagram; structure complete; first-version docs readable end to end.
+- ✅ Publish the coordination workflow diagram in the README
+- **Validation:** README displays the diagram; structure complete; first-version docs readable end to end.
 
 ### Phase 2 — Deep Content
-**Goal:** Flesh out remaining topic docs and diagrams.
+**Goal:** Flesh out remaining topic docs.
 - ✅ Complete docs 02–07
-- ✅ Add `detailed-bim-coordination-workflow.mmd` and `tool-map.mmd`
 - ✅ Complete `links/learning-resources.md`
-- **Validation:** Each doc follows the standard template; diagrams render.
+- **Validation:** Each doc follows the standard template.
 
 ### Phase 3 — Worked Examples
 **Goal:** Real AEC examples that apply the workflow.
@@ -228,7 +223,7 @@ The repo is successful when:
 
 | Risk | Mitigation |
 |---|---|
-| Copying branded/copyrighted diagrams | Author all diagrams originally in Mermaid; review for originality before publishing. |
+| Copying branded/copyrighted diagrams | Author all diagrams originally (3D model built in Revit, then exported); review for originality before publishing. |
 | Over-simplifying or, conversely, overbuilding | Keep MVP to clean first versions; defer deep content to Phase 2; follow "do not overbuild." |
 | Reinforcing the "clash detection = BIM" misconception | Lead every relevant doc with the full hierarchy; state explicitly that clash detection is one step. |
 | Jargon alienating beginners | Define terms in the glossary; explain on first use in each doc. |

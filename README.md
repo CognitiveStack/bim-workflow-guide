@@ -76,37 +76,6 @@ Beginners often mix these up. Here is the difference:
 
 ---
 
-## The flow as a simple chart
-
-A lightweight, GitHub-native version of the same idea:
-
-```mermaid
-flowchart TD
-    A[Discipline Models] --> B[Authoring Tools<br/>Revit · Civil 3D]
-    B --> C[Publish Models]
-    C --> D[Design Packages]
-    D --> E[Common Data Environment]
-    E --> F[Federated Model]
-    F --> G[Coordination Review]
-    G --> H[Clash Detection]
-    H --> I[Issues Assigned]
-    I --> J[Model Updates]
-    J --> E
-    J --> K[Shop Drawings]
-    K --> L[Construction / Installation]
-    L --> M[As-Built Updates]
-    M --> N[Owner Handover]
-
-    classDef stage fill:#e8f0fe,stroke:#3b6fb6,stroke-width:1px,color:#1a2a44;
-    classDef loop fill:#fde7e7,stroke:#c0564b,stroke-width:1px,color:#44211a;
-    class A,B,C,D,E,F,G,K,L,M,N stage;
-    class H,I,J loop;
-```
-
-The source diagram lives in [`diagrams/simplified-bim-coordination-workflow.mmd`](diagrams/simplified-bim-coordination-workflow.mmd).
-
----
-
 ## Documentation
 
 - [01 — BIM Workflow Overview](docs/01-bim-workflow-overview.md)

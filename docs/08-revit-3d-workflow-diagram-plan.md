@@ -22,7 +22,7 @@ A flowchart shows *order*; the 3D model shows *structure and relationships* — 
 
 ## Modernized terminology (de-branded)
 
-This is the canonical term list. Keep it consistent across the model, the Mermaid diagram, and the docs.
+This is the canonical term list. Keep it consistent across the model and the docs.
 
 | Original (2019) | Modernized term used here |
 |---|---|
@@ -123,9 +123,8 @@ Place markers for: 1, 2, 3, 4.1, 4.2, 5, 6, 7, 8, 8.1, 8.2, 9, 10 — positions 
 
 ## How this connects back to the repo
 
-- The **Mermaid diagram stays** as the lightweight, GitHub-renderable inline view.
-- The **exported Revit images** become the richer 3D illustration, embedded alongside the Mermaid diagram — a complement, not a replacement.
-- Keep block names, colors, and callout numbers aligned across: the README stages, the Mermaid diagram, and this Revit model.
+- The **exported Revit images** are the primary workflow illustration, embedded in the README and in `docs/09-coordination-workflow-diagram.md`.
+- Keep block names, colors, and callout numbers aligned across: the README, `docs/09`, and this Revit model.
 
 ## Build notes
 
