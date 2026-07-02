@@ -2,7 +2,7 @@
 
 This is the central teaching diagram for the repo: a modernized view of how a BIM coordination workflow runs on a cloud Common Data Environment. It was built as 3D geometry in Revit (via the pyRevit MCP — see [08](08-revit-3d-workflow-diagram-plan.md)) and exported for the web. The original contractor branding has been removed.
 
-![Autodesk Coordination Workflow](../diagrams/revit/exports/AD-Coordination-Workflow-v05.png)
+![Autodesk Coordination Workflow](../diagrams/revit/exports/ad-coordination-workflow-v05.png)
 
 > **Why "Autodesk Coordination Workflow"?** The original contractor branding (Turner / White Plains Hospital) has been removed, but the title deliberately keeps *Autodesk*: the two cloud drivers in the diagram — **Design Collaboration** (callout 2) and **Model Coordination** (callout 5) — are Autodesk Forma products. That doesn't lock out open standards — models in **IFC** format (e.g. from Tekla) still interoperate — the point is that the *cloud coordination process itself* is Autodesk-driven.
 

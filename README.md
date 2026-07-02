@@ -32,7 +32,7 @@ BIM Workflow
 
 The central teaching diagram — built as 3D geometry in Revit and modernized around a cloud **Common Data Environment**:
 
-![Autodesk Coordination Workflow](diagrams/revit/exports/AD-Coordination-Workflow-v05.png)
+![Autodesk Coordination Workflow](diagrams/revit/exports/ad-coordination-workflow-v05.png)
 
 It flows left → right across **DESIGN → CONSTRUCTION → OPERATION**, with the blue **Common Data Environment (CDE)** running through the middle as the single source of truth. **Consultant models** (design) and **contractor models** (construction) both publish to it; two feedback loops — **RFI** and **ISSUES** — make coordination a cycle rather than a one-way pipeline.
 
