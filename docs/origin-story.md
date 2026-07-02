@@ -8,11 +8,11 @@ I built the [Autodesk Coordination Workflow diagram](workflow-overview.md) to te
 
 ## The image that inspired me
 
-The spark was a diagram I saw in one of Jeffrey Pinheiro's videos — **The Revit Kid** — specifically ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s) from his *BIM After Dark* series. The diagram itself was created by **Turner Construction** for their White Plains Hospital project:
+The spark was a diagram created by **Jeffrey Pinheiro — The Revit Kid** — in his video ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s), part of his *BIM After Dark* series. His diagram illustrates the coordination workflow using Turner's White Plains Hospital project as the worked example:
 
-![The original BIM coordination diagram that inspired this project](../diagrams/inspiration/turner-bim-coordination-white-plains-original.png)
+![The original BIM coordination diagram that inspired this project](../diagrams/inspiration/revit-kid-bim-coordination-workflow-original.png)
 
-*Original: "BIM Coordination at White Plains Hospital [MOD IV]", Turner Construction — as shown by The Revit Kid. (See [full credit](../diagrams/inspiration/README.md). This is a cleaned screenshot; the owner released it publicly and I've kept it clearly attributed.)*
+*Original diagram by Jeffrey Pinheiro (The Revit Kid), from "3D Coordination Explained" — using Turner's White Plains Hospital [MOD IV] project as the example. (See [full credit](../diagrams/inspiration/README.md). This is a cleaned screenshot; the owner released it publicly and I've kept it clearly attributed.)*
 
 I loved how it turned an abstract process into a 3D story you could actually follow. I wanted to build my own version — but modernized for how the work is done today.
 

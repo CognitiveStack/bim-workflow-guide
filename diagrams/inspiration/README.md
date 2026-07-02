@@ -2,13 +2,13 @@
 
 This folder holds the **third-party reference image** that inspired this project. It is **not** original work; it is included for educational reference, with credit.
 
-![The original BIM coordination diagram that inspired this project](turner-bim-coordination-white-plains-original.png)
+![The original BIM coordination diagram that inspired this project](revit-kid-bim-coordination-workflow-original.png)
 
-*Original diagram: "BIM Coordination at White Plains Hospital [MOD IV]" (Draft 03.07.2019) — Turner Construction. Surfaced and explained by The Revit Kid.*
+*Original diagram by Jeffrey Pinheiro — The Revit Kid — from "3D Coordination Explained". It depicts a coordination workflow using Turner's White Plains Hospital [MOD IV] project as the worked example.*
 
 | File | Source | Credit | Note |
 |---|---|---|---|
-| `turner-bim-coordination-white-plains-original.png` | Screenshot from The Revit Kid's YouTube video ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s) (BIM After Dark series) | Diagram by **Turner Construction**; brought to my attention by **Jeffrey Pinheiro — The Revit Kid** | Screenshot cleaned (cropped; YouTube player chrome, presenter thumbnail, and like/comment icons removed). Educational use with attribution. A higher-resolution official copy may replace this if found. |
+| `revit-kid-bim-coordination-workflow-original.png` | Screenshot from The Revit Kid's YouTube video ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s) (BIM After Dark series) | Diagram created by **Jeffrey Pinheiro — The Revit Kid** (depicting Turner's White Plains Hospital project as the example) | Screenshot cleaned (cropped; YouTube player chrome, presenter thumbnail, and like/comment icons removed). Educational use with attribution. A higher-resolution official copy may replace this if found. |
 
 ## Why it's here
 
@@ -16,7 +16,7 @@ This is the diagram that inspired the modernized [Autodesk Coordination Workflow
 
 ## Credits
 
-- **Diagram origin:** Turner Construction — "BIM Coordination at White Plains Hospital [MOD IV]".
-- **Surfaced / explained by:** Jeffrey Pinheiro, *The Revit Kid* — video ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s), part of the *BIM After Dark* series.
+- **Diagram by:** Jeffrey Pinheiro, *The Revit Kid* — from the video ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s), part of the *BIM After Dark* series.
+- **Example project depicted:** Turner's "BIM Coordination at White Plains Hospital [MOD IV]".
 
 If you are a rights holder and would like attribution adjusted or the image removed, please open an issue.
