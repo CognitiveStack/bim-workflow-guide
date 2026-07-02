@@ -28,10 +28,10 @@ Autodesk binaries are excluded from Git by default (see `.gitignore`): `.rvt`, `
 ## Naming and referencing
 
 - Exports live under [`diagrams/revit/exports/`](../diagrams/revit/README.md).
-- Preferred naming pattern: `ad-coordination-workflow-v05.png` (lowercase, versioned).
+- Preferred naming pattern: `ad-coordination-workflow-v06.png` (lowercase, versioned).
 - Markdown pages reference the **current** diagram version. When a new export supersedes it, update the references and record the new version in the [exports table](../diagrams/revit/README.md).
 
-The current primary Phase 2 diagram is **`ad-coordination-workflow-v05.png`**.
+The current primary Phase 2 diagram is **`ad-coordination-workflow-v06.png`**.
 
 ---
 

@@ -54,7 +54,7 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 - ✅ `docs/08-revit-3d-workflow-diagram-plan.md` (full first version)
 
 **Diagrams**
-- ✅ `diagrams/revit/exports/ad-coordination-workflow-v05.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, contractor-neutral, with RFI + ISSUES loops) — the primary workflow illustration
+- ✅ `diagrams/revit/exports/ad-coordination-workflow-v06.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, contractor-neutral, with RFI + ISSUES loops) — the primary workflow illustration
 - ✅ `docs/workflow-overview.md` + `docs/callouts/01–06` (embed the 3D diagram and explain the 6 callouts + both loops)
 
 **Structure**
@@ -64,7 +64,7 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 
 - ❌ Fully written versions of all detailed topic docs (02–07) — stubs only in MVP
 - ❌ Completed worked examples (Harrismith Fire Station, BIM Clash Visual Atlas) — placeholders only
-- ✅ The Revit MCP-generated 3D teaching model — **Module 00 built** (`ad-coordination-workflow-v05`); further modules still out of scope
+- ✅ The Revit MCP-generated 3D teaching model — **Module 00 built** (`ad-coordination-workflow-v06`); further modules still out of scope
 - ❌ Website or slide-deck rendering
 - ❌ Live MCP automation (Revit MCP, Forma MCP) integration
 
@@ -126,7 +126,7 @@ cogstack-bim-coordination-workflow/
 ├── diagrams/
 │   └── revit/
 │       ├── README.md              # exports table + versioning
-│       └── exports/ad-coordination-workflow-v05.png
+│       └── exports/ad-coordination-workflow-v06.png
 ├── examples/
 │   ├── harrismith-fire-station/README.md
 │   └── bim-clash-visual-atlas/README.md
@@ -241,7 +241,7 @@ The repo must distinguish: BIM workflow · BIM coordination · MEP coordination 
 
 ### Phase 4 — Revit 3D Teaching Model
 **Goal:** Build the 3D workflow diagram in Revit via Revit MCP.
-- ✅ **Module 00 built** (`ad-coordination-workflow-v05.png`): 7 consultant + 4 contractor streams, CDE spine, Design Collaboration + Model Coordination, Federated Model, RFI + ISSUES loops, 6 numbered callouts.
+- ✅ **Module 00 built** (`ad-coordination-workflow-v06.png`): 7 consultant + 4 contractor streams, CDE spine, Design Collaboration + Model Coordination, Federated Model, RFI + ISSUES loops, 6 numbered callouts.
 - ✅ Explained in `docs/workflow-overview.md` (+ the six callout pages) and embedded in the README.
 - ⏳ Future modules (e.g. Module 01 — Construction: shop drawings, fabrication) remain out of scope.
 - **Validation:** Model matches the documented plan and the README/doc-09 narrative.

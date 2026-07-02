@@ -1,6 +1,6 @@
 # Workflow Overview — Autodesk Coordination Workflow (BIM-001)
 
-![Autodesk Coordination Workflow](../diagrams/revit/exports/ad-coordination-workflow-v05.png)
+![Autodesk Coordination Workflow](../diagrams/revit/exports/ad-coordination-workflow-v06.png)
 
 *Autodesk Coordination Workflow — a Revit-generated 3D teaching diagram showing consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model.*
 

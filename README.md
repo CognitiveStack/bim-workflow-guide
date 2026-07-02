@@ -22,7 +22,7 @@ In his diagram, the blue **"Turner"** spine is the Construction Manager / Genera
 
 ## The result — Autodesk Coordination Workflow
 
-![Autodesk Coordination Workflow](diagrams/revit/exports/ad-coordination-workflow-v05.png)
+![Autodesk Coordination Workflow](diagrams/revit/exports/ad-coordination-workflow-v06.png)
 
 *Autodesk Coordination Workflow — my Revit-generated 3D teaching diagram: consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model.*
 
@@ -30,7 +30,7 @@ Full explanation: **[docs/workflow-overview.md](docs/workflow-overview.md)**.
 
 ### Diagrams
 
-- **BIM-001 — Autodesk Coordination Workflow / Overview** — `diagrams/revit/exports/ad-coordination-workflow-v05.png`
+- **BIM-001 — Autodesk Coordination Workflow / Overview** — `diagrams/revit/exports/ad-coordination-workflow-v06.png`
 - BIM-002 — Coordination Feedback Loop *(planned as a separate export)*
 
 ---
