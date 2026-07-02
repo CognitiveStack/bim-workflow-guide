@@ -14,8 +14,6 @@ The spark was a diagram by **Jeffrey Pinheiro — The Revit Kid** — from his v
 
 In his diagram, the blue **"Turner"** spine is the Construction Manager / General Contractor — the hub everything flows through. What struck me is that in a modern cloud workflow **that spine is replaced by the cloud itself**. So I rebuilt it: the spine became the **Common Data Environment**, made Autodesk-centric by the two blue **Forma** workflows sitting on it — **Design Collaboration** and **Model Coordination** (Forma was formerly ACC). And because my Revit skills are modest, I built the 3D model with the [pyRevit MCP server](https://github.com/CognitiveStack/revit-mcp-server).
 
-👉 **Read the full story:** [docs/origin-story.md](docs/origin-story.md)
-
 > *Revit produces the diagram. Markdown explains the diagram. GitHub versions the learning system.*
 
 ---
@@ -26,100 +24,40 @@ In his diagram, the blue **"Turner"** spine is the Construction Manager / Genera
 
 *Autodesk Coordination Workflow — my Revit-generated 3D teaching diagram: consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model.*
 
-Full explanation: **[docs/workflow-overview.md](docs/workflow-overview.md)**.
+## 📖 Read the full guide
 
-### Diagrams
+Everything — the origin story, the diagram walkthrough, the six callouts, the feedback loop, Forma Model Coordination, Revit → Navisworks, Construction vs Operations, and non-obvious coordination risks — is on one page:
 
-- **BIM-001 — Autodesk Coordination Workflow / Overview** — `diagrams/revit/exports/ad-coordination-workflow-v06.png`
-- BIM-002 — Coordination Feedback Loop *(planned as a separate export)*
-
----
-
-## Core idea
-
-**BIM coordination is not just clash detection.** Clash detection is one quality-control activity inside a much wider, iterative coordination workflow:
-
-```
-BIM Workflow
-└─ BIM Coordination
-   └─ Federated Models
-      └─ MEP Coordination
-         └─ Clash Detection
-            └─ Issue Management
-               └─ Model Updates
-                  └─ Construction Support
-                     └─ As-Built / Owner Handover
-```
-
-The **Common Data Environment (CDE)** is the backbone — the controlled place where information is shared, versioned, reviewed, routed, and recorded. But the CDE does not *fix* coordination problems: **people fix the source models**, then republish to the CDE and re-coordinate.
-
-> **Find → Raise → Fix → Republish → Re-coordinate → Verify**
+### → **[The Autodesk BIM Coordination Workflow — Complete Guide](docs/guide.md)**
 
 ---
 
-## Core concepts
+## Reference pages
 
-- [Consultant Models & Coordinated Models](docs/callouts/01-coordinated-models.md)
-- [Design Collaboration](docs/callouts/02-design-collaboration.md)
-- [Common Data Environment](docs/callouts/03-common-data-environment.md)
-- [Contractor / Trade Models](docs/callouts/04-contractor-trade-models.md)
-- [Model Coordination](docs/callouts/05-model-coordination.md)
-- [RFIs and Issues (feedback loops)](docs/coordination-feedback-loop.md)
-- [Federated Model](docs/callouts/06-federated-model.md)
-- [Construction vs Operations](docs/construction-vs-operations.md)
-
----
-
-## Documentation
-
-**Start here**
-- [Documentation index](docs/index.md)
-- [Origin Story — how I built and modernized this](docs/origin-story.md)
-- [Workflow Overview (BIM-001)](docs/workflow-overview.md)
-- [Coordination Feedback Loop](docs/coordination-feedback-loop.md)
-
-**The six callouts**
-- [01 — Coordinated Models](docs/callouts/01-coordinated-models.md)
-- [02 — Design Collaboration](docs/callouts/02-design-collaboration.md)
-- [03 — Common Data Environment](docs/callouts/03-common-data-environment.md)
-- [04 — Contractor / Trade Models](docs/callouts/04-contractor-trade-models.md)
-- [05 — Model Coordination](docs/callouts/05-model-coordination.md)
-- [06 — Federated Model](docs/callouts/06-federated-model.md)
-
-**Workflow topics**
-- [Revit → Navisworks Workflow](docs/revit-to-navisworks-workflow.md)
-- [Forma Model Coordination](docs/forma-model-coordination.md)
-- [Construction vs Operations](docs/construction-vs-operations.md)
-- [Versioning and Exports](docs/versioning-and-exports.md)
-- [Non-Obvious Coordination Risks](docs/coordination-risks/non-obvious-clashes.md)
-
-**Background & build**
-- [BIM Workflow Overview](docs/01-bim-workflow-overview.md)
-- [Glossary](docs/glossary.md)
-- [Revit 3D Diagram Build Runbook](docs/08-revit-3d-workflow-diagram-plan.md) · [Build Prompt](docs/08-revit-build-prompt.md)
-- [diagrams/revit — exports & versioning](diagrams/revit/README.md)
-
-**Examples & links**
-- [Harrismith Fire Station](examples/harrismith-fire-station/README.md) *(coming soon)* · [BIM Clash Visual Atlas](examples/bim-clash-visual-atlas/README.md) *(coming soon)*
+- [Glossary](docs/glossary.md) — key BIM terms
+- [Revit 3D diagram build runbook](docs/08-revit-3d-workflow-diagram-plan.md) · [Build prompt](docs/08-revit-build-prompt.md) — how the diagram was built (pyRevit MCP)
+- [Versioning & exports](docs/versioning-and-exports.md) — how diagrams and docs are version-controlled
+- [Diagram exports & credit](diagrams/revit/README.md) · [Inspiration & credit](diagrams/inspiration/README.md)
+- [PRD](PRD.md) — product requirements
 - [Related CogStack repos](links/related-repos.md) · [Learning resources](links/learning-resources.md) *(coming soon)*
+- Examples: [Harrismith Fire Station](examples/harrismith-fire-station/README.md) *(coming soon)* · [BIM Clash Visual Atlas](examples/bim-clash-visual-atlas/README.md) *(coming soon)*
 
 ---
 
 ## Versioning strategy
 
-- **Revit `.rvt`** = diagram authoring file (not committed to Git by default — binary, no useful diffs).
+- **Revit `.rvt`** = diagram authoring file (not committed to Git — binary, no useful diffs; excluded via `.gitignore`).
 - **PNG / PDF exports** = version-controlled visual artifacts under `diagrams/revit/exports/`.
 - **Markdown docs** = explanation / source of truth.
 - **GitHub** = versioned educational repo / website source.
 
-See [docs/versioning-and-exports.md](docs/versioning-and-exports.md). The source Revit model can be archived separately or managed with Git LFS later if needed.
-
----
+See [docs/versioning-and-exports.md](docs/versioning-and-exports.md).
 
 ## Roadmap
 
-- **Phase 1 (done):** Foundation — repo scaffold, overview, glossary, first diagram.
-- **Phase 2 (this update):** The Revit-generated PNG diagram becomes the primary educational artifact, explained in Markdown — the six callouts, feedback loops, Revit→Navisworks, Forma Model Coordination, Construction vs Operations, and non-obvious coordination risks.
-- **Phase 3:** Worked examples — Harrismith Fire Station, BIM Clash Visual Atlas.
+- **Phase 1 (done):** Foundation — repo scaffold, first diagram, glossary.
+- **Phase 2 (done):** The Revit-generated diagram becomes the primary artifact, explained in Markdown.
+- **Phase 3 (this update):** Consolidated into a single-page [guide](docs/guide.md) with reference pages alongside.
+- **Phase 4:** Worked examples — Harrismith Fire Station, BIM Clash Visual Atlas.
 
 See [PRD.md](PRD.md) for the full product requirements.

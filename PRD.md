@@ -48,14 +48,14 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 **Core content**
 - ✅ Beginner-friendly README explaining the full workflow
 - ✅ Workflow hierarchy: BIM Workflow → Coordination → Federated Models → MEP Coordination → Clash Detection → Issue Management → Model Updates → Construction Support → As-Built / Handover
-- ✅ `docs/01-bim-workflow-overview.md` (full first version)
+- ✅ `docs/guide.md` (single-page guide: origin story, diagram walkthrough, six callouts, feedback loop, Forma, Navisworks, Construction vs Operations, coordination risks)
 - ✅ `docs/glossary.md` (full first version)
 - ✅ `links/related-repos.md` (full first version)
 - ✅ `docs/08-revit-3d-workflow-diagram-plan.md` (full first version)
 
 **Diagrams**
 - ✅ `diagrams/revit/exports/ad-coordination-workflow-v06.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, contractor-neutral, with RFI + ISSUES loops) — the primary workflow illustration
-- ✅ `docs/workflow-overview.md` + `docs/callouts/01–06` (embed the 3D diagram and explain the 6 callouts + both loops)
+- ✅ `docs/guide.md` embeds the 3D diagram and explains the 6 callouts + both loops (single page with in-page TOC anchors)
 
 **Structure**
 - ✅ Full repository directory and file structure scaffolded (stubs for remaining docs/diagrams/examples/links)
@@ -103,26 +103,11 @@ cogstack-bim-coordination-workflow/
 ├── PRD.md
 ├── .gitignore                     # excludes Autodesk binaries (.rvt/.nwc/.nwf/.nwd)
 ├── docs/
-│   ├── index.md
-│   ├── workflow-overview.md            # BIM-001 diagram explained
-│   ├── coordination-feedback-loop.md   # RFI + Issues loops
-│   ├── revit-to-navisworks-workflow.md
-│   ├── forma-model-coordination.md
-│   ├── construction-vs-operations.md
-│   ├── versioning-and-exports.md
-│   ├── 01-bim-workflow-overview.md     # background
+│   ├── guide.md                    # single-page guide (all core content + TOC anchors)
+│   ├── glossary.md                 # reference
+│   ├── versioning-and-exports.md   # reference
 │   ├── 08-revit-3d-workflow-diagram-plan.md   # build runbook
-│   ├── 08-revit-build-prompt.md
-│   ├── glossary.md
-│   ├── callouts/
-│   │   ├── 01-coordinated-models.md
-│   │   ├── 02-design-collaboration.md
-│   │   ├── 03-common-data-environment.md
-│   │   ├── 04-contractor-trade-models.md
-│   │   ├── 05-model-coordination.md
-│   │   └── 06-federated-model.md
-│   └── coordination-risks/
-│       └── non-obvious-clashes.md
+│   └── 08-revit-build-prompt.md
 ├── diagrams/
 │   └── revit/
 │       ├── README.md              # exports table + versioning
@@ -136,27 +121,20 @@ cogstack-bim-coordination-workflow/
 ```
 
 **Design patterns:**
-- **Callout-per-page** — each of the six diagram callouts has its own Markdown page (Meaning / Why it matters / Autodesk workflow connection / Simple example).
+- **Single-page guide** — all core learning content lives in `docs/guide.md` with a table of contents that jumps in-page (GitHub heading anchors); external links reserved for reference/appendix pages.
 - **Diagram + explanation split** — the Revit-built 3D diagram is the visual; Markdown is the source of truth.
 - **Original diagrams** — the coordination diagram is built as 3D geometry in Revit (via pyRevit MCP) and exported as PNG for the web.
-- **Separation of concerns** — concepts in `docs/`, visuals in `diagrams/`, applied cases in `examples/`, external pointers in `links/`.
+- **Separation of concerns** — narrative in `docs/guide.md`, reference in `docs/` (glossary, versioning, build), visuals in `diagrams/`, applied cases in `examples/`, external pointers in `links/`.
 
 ## 7. Tools / Features (Content Modules)
 
 | Module | Purpose |
 |---|---|
-| README | Landing page; main diagram, core concepts, doc links, versioning strategy |
-| `docs/index.md` | Documentation index |
-| `workflow-overview` | The BIM-001 Autodesk Coordination Workflow diagram explained |
-| `coordination-feedback-loop` | RFI + Issues loops; coordination as an iterative cycle |
-| `callouts/01–06` | One page per numbered callout (Coordinated Models → Federated Model) |
-| `revit-to-navisworks-workflow` | RVT authoring → NWC/NWF/NWD review workflow |
-| `forma-model-coordination` | Forma Model Coordination as collaboration-first |
-| `construction-vs-operations` | Lifecycle roles of the model across phases |
-| `versioning-and-exports` | Why PNG/Markdown are versioned and the .rvt is not |
-| `coordination-risks/non-obvious-clashes` | Access/maintenance/sequence risks beyond geometry |
-| `01-bim-workflow-overview` | Background: clash detection is not the whole workflow |
-| `08-revit-3d-workflow-diagram-plan` / `-build-prompt` | Revit build runbook + Desktop prompt |
+| README | Slim cover — origin-story intro, main diagram, link into the guide, reference links |
+| `docs/guide.md` | **Single-page guide**: origin story · diagram · how to read it · the six callouts · feedback loop · Forma Model Coordination · Revit→Navisworks · Construction vs Operations · non-obvious risks |
+| `docs/glossary.md` | Reference: plain definitions of key BIM terms |
+| `docs/versioning-and-exports.md` | Reference: why PNG/Markdown are versioned and the .rvt is not |
+| `docs/08-revit-3d-workflow-diagram-plan.md` / `-build-prompt` | Revit build runbook + Desktop prompt |
 | `glossary` | Plain definitions of key BIM terms |
 | `diagrams/revit/` | Exported 3D coordination diagram + exports table |
 | `examples/` / `links/` | Worked AEC examples; related repos and learning resources |
@@ -202,7 +180,7 @@ The repo is successful when:
 ### Phase 1 — Foundation (MVP)
 **Goal:** Clean, reviewable first version of the repo.
 - ✅ Create full directory/file structure
-- ✅ Write README, PRD, `01-bim-workflow-overview`, `glossary`, `links/related-repos`, `08-revit-3d-workflow-diagram-plan`
+- ✅ Write README, PRD, glossary, `links/related-repos`, `08-revit-3d-workflow-diagram-plan` (early topic docs later consolidated into `docs/guide.md`)
 - ✅ Publish the coordination workflow diagram in the README
 - **Validation:** README displays the diagram; structure complete; first-version docs readable end to end.
 
@@ -212,11 +190,7 @@ The repo is successful when:
 The repo must distinguish: BIM workflow · BIM coordination · MEP coordination · clash detection · model coordination · issue/RFI workflow · federated model handover.
 
 - ✅ README displays the current Revit PNG export
-- ✅ `docs/workflow-overview.md` explains the BIM-001 diagram
-- ✅ `docs/coordination-feedback-loop.md` explains RFI + Issues loops returning to model authors
-- ✅ Six callout pages under `docs/callouts/`
-- ✅ `docs/revit-to-navisworks-workflow.md`, `docs/forma-model-coordination.md`, `docs/construction-vs-operations.md`
-- ✅ `docs/coordination-risks/non-obvious-clashes.md`
+- ✅ Diagram walkthrough, the six callouts, RFI + Issues feedback loops, Revit→Navisworks, Forma Model Coordination, Construction vs Operations, and non-obvious risks written up (originally separate pages; consolidated into `docs/guide.md` in Phase 5)
 - ✅ `docs/versioning-and-exports.md` + `diagrams/revit/README.md` (exports table)
 - ✅ `.gitignore` excludes Autodesk binaries (`.rvt/.nwc/.nwf/.nwd`)
 
@@ -224,7 +198,7 @@ The repo must distinguish: BIM workflow · BIM coordination · MEP coordination 
 - ✅ README displays the current Revit PNG export
 - ✅ The exported PNG is stored under `diagrams/revit/exports/`
 - ✅ The source Revit model is not committed to Git
-- ✅ The six callouts each have their own Markdown page
+- ✅ Each of the six callouts is explained (now as sections of `docs/guide.md`)
 - ✅ The CDE is explained as the backbone of the workflow
 - ✅ RFIs and Issues are explained as feedback loops to model authors
 - ✅ Forma Model Coordination is explained as collaboration-first
@@ -242,11 +216,18 @@ The repo must distinguish: BIM workflow · BIM coordination · MEP coordination 
 ### Phase 4 — Revit 3D Teaching Model
 **Goal:** Build the 3D workflow diagram in Revit via Revit MCP.
 - ✅ **Module 00 built** (`ad-coordination-workflow-v06.png`): 7 consultant + 4 contractor streams, CDE spine, Design Collaboration + Model Coordination, Federated Model, RFI + ISSUES loops, 6 numbered callouts.
-- ✅ Explained in `docs/workflow-overview.md` (+ the six callout pages) and embedded in the README.
+- ✅ Explained in `docs/guide.md` and embedded in the README.
 - ⏳ Future modules (e.g. Module 01 — Construction: shop drawings, fabrication) remain out of scope.
-- **Validation:** Model matches the documented plan and the README/doc-09 narrative.
+- **Validation:** Model matches the documented plan and the README / guide narrative.
 
 **Callout scheme (Module 00):** 1 Coordinated Models · 2 Design Collaboration · 3 Common Data Environment · 4 Contractor Models · 5 Model Coordination · 6 Federated Model · (loops) RFI, ISSUES.
+
+### Phase 5 — Single-page guide consolidation
+**Goal:** Replace the multi-page docs hub with one long-form page plus reference pages.
+- ✅ All core narrative consolidated into `docs/guide.md` with an in-page table of contents (GitHub heading anchors).
+- ✅ README slimmed to a cover that links into the guide.
+- ✅ Reference/appendix kept as separate pages: glossary, build runbook + prompt, versioning & exports, diagram/inspiration READMEs, PRD.
+- **Validation:** All internal links and in-page anchors resolve; no orphaned pages.
 
 ## 13. Future Considerations
 

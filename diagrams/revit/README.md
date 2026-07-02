@@ -23,4 +23,4 @@ This folder holds the **Revit-authored coordination diagram** and its published 
 
 *Autodesk Coordination Workflow — Revit-generated 3D teaching diagram showing consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model.*
 
-Explained in [docs/workflow-overview.md](../../docs/workflow-overview.md).
+Explained in the [guide](../../docs/guide.md).

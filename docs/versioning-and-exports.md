@@ -35,4 +35,4 @@ The current primary Phase 2 diagram is **`ad-coordination-workflow-v06.png`**.
 
 ---
 
-*See also: [diagrams/revit README](../diagrams/revit/README.md) · [workflow overview](workflow-overview.md)*
+*See also: [diagrams/revit README](../diagrams/revit/README.md) · [guide](guide.md)*
