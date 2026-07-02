@@ -28,6 +28,31 @@ BIM Workflow
 
 ---
 
+## The coordination workflow at a glance
+
+The central teaching diagram — built as 3D geometry in Revit and modernized around a cloud **Common Data Environment**:
+
+![Autodesk Coordination Workflow](diagrams/revit/exports/AD-Coordination-Workflow-v05.png)
+
+It flows left → right across **DESIGN → CONSTRUCTION → OPERATION**, with the blue **Common Data Environment (CDE)** running through the middle as the single source of truth. **Consultant models** (design) and **contractor models** (construction) both publish to it; two feedback loops — **RFI** and **ISSUES** — make coordination a cycle rather than a one-way pipeline.
+
+### The six callouts
+
+| # | Element | In one line |
+|---|---|---|
+| **1** | Coordinated Models | Design consultants' models brought together (design side) |
+| **2** | Design Collaboration | Cloud workflow that publishes design models into the CDE |
+| **3** | Common Data Environment | The cloud single source of truth — the spine |
+| **4** | Contractor Models | Trade / fabrication models published into the CDE |
+| **5** | Model Coordination | Cloud federation + automated clash detection |
+| **6** | Federated Model | All models combined — used in construction, handed to operation |
+
+Plus two loops: **RFI** (design questions → design changes) and **ISSUES** (clashes → model updates).
+
+👉 **Full walkthrough:** [09 — The Coordination Workflow Diagram Explained](docs/09-coordination-workflow-diagram.md)
+
+---
+
 ## Why BIM coordination matters
 
 On a real project, many teams design at the same time: architects, structural engineers, mechanical, electrical, plumbing (MEP), fire protection, and civil/site. Each team builds its own 3D model.
@@ -51,14 +76,16 @@ Beginners often mix these up. Here is the difference:
 
 ---
 
-## The workflow at a glance
+## The flow as a simple chart
+
+A lightweight, GitHub-native version of the same idea:
 
 ```mermaid
 flowchart TD
     A[Discipline Models] --> B[Authoring Tools<br/>Revit · Civil 3D]
     B --> C[Publish Models]
     C --> D[Design Packages]
-    D --> E[Model Coordination Space]
+    D --> E[Common Data Environment]
     E --> F[Federated Model]
     F --> G[Coordination Review]
     G --> H[Clash Detection]
@@ -80,25 +107,6 @@ The source diagram lives in [`diagrams/simplified-bim-coordination-workflow.mmd`
 
 ---
 
-## Workflow stages explained
-
-1. **Discipline Models** — Each team owns its model (architecture, structure, MEP, fire, civil).
-2. **Authoring Tools** — Models are created in tools like Revit and Civil 3D.
-3. **Publish Models** — Teams publish their models to a shared cloud location.
-4. **Design Packages** — Published models are organized into shareable packages.
-5. **Model Coordination Space** — A cloud space where all discipline models come together.
-6. **Federated Model** — All models combined into one coordinated view (without merging the originals).
-7. **Coordination Review** — Teams review the federated model together.
-8. **Clash Detection** — Automatic checks find physical conflicts and clearance problems.
-9. **Issues Assigned** — Each clash or problem becomes an issue assigned to the responsible team.
-10. **Model Updates** — Teams fix their models; updates flow back into the coordination space (the loop).
-11. **Shop Drawings** — Coordinated models inform drawings used to fabricate and install.
-12. **Construction / Installation** — The building is built from coordinated information.
-13. **As-Built Updates** — Models are updated to reflect what was actually built.
-14. **Owner Handover** — The final model and asset data are handed to the owner.
-
----
-
 ## Documentation
 
 - [01 — BIM Workflow Overview](docs/01-bim-workflow-overview.md)
@@ -108,7 +116,8 @@ The source diagram lives in [`diagrams/simplified-bim-coordination-workflow.mmd`
 - [05 — Forma Model Coordination](docs/05-forma-model-coordination.md) *(coming soon)*
 - [06 — Navisworks Workflow](docs/06-navisworks-workflow.md) *(coming soon)*
 - [07 — Revit MCP Automation](docs/07-revit-mcp-automation.md) *(coming soon)*
-- [08 — Revit 3D Workflow Diagram Plan](docs/08-revit-3d-workflow-diagram-plan.md)
+- [08 — Revit 3D Workflow Diagram: Build Runbook](docs/08-revit-3d-workflow-diagram-plan.md)
+- [09 — The Coordination Workflow Diagram Explained](docs/09-coordination-workflow-diagram.md)
 - [Glossary](docs/glossary.md)
 
 **Examples**
@@ -123,9 +132,9 @@ The source diagram lives in [`diagrams/simplified-bim-coordination-workflow.mmd`
 
 ## Roadmap
 
-- **Phase 1 (now):** Foundation — README, overview doc, glossary, simplified diagram, related-repos links.
-- **Phase 2:** Deep content — complete topic docs 02–07 and detailed diagrams.
+- **Phase 1 (done):** Foundation — README, overview doc, glossary, simplified diagram, related-repos links.
+- **Phase 2 (in progress):** Deep content — complete topic docs 02–07 and detailed diagrams.
 - **Phase 3:** Worked examples — Harrismith Fire Station, BIM Clash Visual Atlas.
-- **Phase 4 — Revit 3D workflow model:** Recreate this workflow as a colored **3D teaching diagram in Revit**, built later with the Revit MCP server. See the [plan](docs/08-revit-3d-workflow-diagram-plan.md).
+- **Phase 4 (Module 00 built):** The workflow recreated as a 3D diagram in Revit via the pyRevit MCP server — see the [build runbook](docs/08-revit-3d-workflow-diagram-plan.md) and the [explained diagram](docs/09-coordination-workflow-diagram.md).
 
 See [PRD.md](PRD.md) for the full product requirements.

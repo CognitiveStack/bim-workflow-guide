@@ -55,6 +55,8 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 
 **Diagrams**
 - ✅ `diagrams/simplified-bim-coordination-workflow.mmd` (original Mermaid flowchart, renders on GitHub)
+- ✅ `diagrams/revit/exports/AD-Coordination-Workflow-v05.png` (3D coordination diagram built in Revit via the pyRevit MCP; CDE-centric, de-branded, with RFI + ISSUES loops)
+- ✅ `docs/09-coordination-workflow-diagram.md` (embeds the 3D diagram and explains the 6 callouts + both loops)
 
 **Structure**
 - ✅ Full repository directory and file structure scaffolded (stubs for remaining docs/diagrams/examples/links)
@@ -64,7 +66,7 @@ The MVP goal is a clean, reviewable first version of the repository: a beginner 
 - ❌ Fully written versions of all detailed topic docs (02–07) — stubs only in MVP
 - ❌ Detailed/tool-map diagrams beyond the simplified flowchart
 - ❌ Completed worked examples (Harrismith Fire Station, BIM Clash Visual Atlas) — placeholders only
-- ❌ The Revit MCP-generated 3D teaching model (planned, documented, not built)
+- ✅ The Revit MCP-generated 3D teaching model — **Module 00 built** (`AD-Coordination-Workflow-v05`); further modules still out of scope
 - ❌ Website or slide-deck rendering
 - ❌ Live MCP automation (Revit MCP, Forma MCP) integration
 
@@ -207,8 +209,12 @@ The repo is successful when:
 
 ### Phase 4 — Revit 3D Teaching Model
 **Goal:** Build the 3D workflow diagram in Revit via Revit MCP.
-- ✅ Colored discipline streams, federated/coordination/construction/handover zones, numbered callouts matching README
-- **Validation:** Model matches the documented plan and README narrative.
+- ✅ **Module 00 built** (`AD-Coordination-Workflow-v05.png`): 7 consultant + 4 contractor streams, CDE spine, Design Collaboration + Model Coordination, Federated Model, RFI + ISSUES loops, 6 numbered callouts.
+- ✅ Explained in `docs/09-coordination-workflow-diagram.md` and embedded in the README.
+- ⏳ Future modules (e.g. Module 01 — Construction: shop drawings, fabrication) remain out of scope.
+- **Validation:** Model matches the documented plan and the README/doc-09 narrative.
+
+**Callout scheme (Module 00):** 1 Coordinated Models · 2 Design Collaboration · 3 Common Data Environment · 4 Contractor Models · 5 Model Coordination · 6 Federated Model · (loops) RFI, ISSUES.
 
 ## 13. Future Considerations
 
