@@ -85,73 +85,31 @@ As for the name: I kept "Autodesk" on purpose. A Common Data Environment is a ge
 
 ## The six callouts
 
-The numbered blue callouts on the diagram are explained below. Each follows the same shape: what it means, why it matters, its Autodesk connection, and a simple example.
+The six numbered stations on the diagram, taken one at a time.
 
 ### 1. Coordinated Models
 
-**Meaning.** Coordinated models are design discipline models that have been brought together and checked for basic alignment before moving deeper into the shared project workflow. In the diagram, these sit between the **Consultant Models** and the **CDE**. Consultant models usually include Civil, Architecture, Structural, Mechanical, Electrical, Plumbing, and Fire.
-
-**Why this matters.** Coordination at this stage helps the team identify design conflicts early — before construction teams price, fabricate, or install work based on incomplete or conflicting information.
-
-**Autodesk workflow connection.** In Revit, each discipline may author its own model. Civil and site information may come from Civil 3D or related site workflows. These models can then be shared through Forma Data Management / ACC and [Design Collaboration](#2-design-collaboration), and later reviewed together in [Model Coordination](#5-model-coordination) or Navisworks.
-
-**Simple example.** The architectural model shows ceiling heights, the structural model shows beams, and the mechanical model shows duct routes. Coordinating them early helps reveal whether the duct routes fit within the ceiling zones.
+Every discipline authors its own model — civil, architecture, structure, and the MEP trades — usually in Revit, with site work often coming from Civil 3D. Before any of it moves downstream, the design team pulls those models together and checks they roughly line up. Catching a conflict here, while it still costs nothing more than rerouting a duct, beats discovering it after a contractor has priced or fabricated around it. This is the first, lightest pass at *does this all actually fit?*
 
 ### 2. Design Collaboration
 
-**Meaning.** Design Collaboration is the controlled sharing process between consultant teams. Instead of exchanging random files, teams publish and share model packages so other disciplines can review, compare, and consume updates in a structured way. In the diagram, it is shown above the CDE with a downward arrow into the main information backbone.
-
-**Why this matters.** This prevents the project from becoming a collection of uncontrolled file copies. It gives the design team a clearer process for sharing work-in-progress information, reviewing changes, and coordinating design intent.
-
-**Autodesk workflow connection.** In Autodesk Forma / ACC, Design Collaboration supports package-based sharing between teams. It helps consultants share model updates before they flow into broader coordination and construction workflows.
-
-**Simple example.** The architecture team shares a package. The structural team reviews and consumes the update. The MEP team can then coordinate its services against the latest shared design intent.
+This is how the consultant teams share work without the project dissolving into a pile of emailed file copies. Rather than swapping random exports, each team publishes model packages the others can review and pull in — the architect publishes, structure consumes the update, MEP then coordinates against the latest design intent. In Autodesk's world it's the Forma / ACC Design Collaboration workflow, shown on the diagram as the blue arrow feeding down into the CDE from the design side.
 
 ### 3. Common Data Environment
 
-**Meaning.** The Common Data Environment, or CDE, is the central information environment for the project — the large blue horizontal backbone in the diagram. It stores and manages models, drawings, documents, packages, reviews, Issues, RFIs, coordination records, and published exports.
-
-**Why this matters.** The CDE becomes the shared project information backbone. Instead of project information being scattered across emails, local folders, USB drives, informal file transfers, and spreadsheets, the CDE gives the team a controlled place to share, version, review, and act on information.
-
-> **The CDE stores, versions, routes, and records information — but it does not fix coordination problems by itself. People and model authors fix the source models.**
-
-**Autodesk workflow connection.** In Autodesk Forma / ACC, Forma Data Management acts as the CDE layer. It connects with Design Collaboration, Model Coordination, Reviews, Issues, and other project workflows.
-
-**Simple example.** A Revit model, a PDF drawing, an Issue, an RFI response, and a coordination review record can all be connected through the CDE instead of being scattered across separate systems.
+The CDE is the shared, controlled home for everything on the project — models, drawings, packages, reviews, issues, RFIs, coordination records, published exports — and it's the blue spine running the length of the diagram. Its whole reason to exist is to replace the usual scatter of emails, local folders, USB sticks and spreadsheets with one place the team can trust. But it pays to be precise about what it does: the CDE stores, versions, routes and records information; it doesn't fix anything. People fix the models. In Autodesk terms, Forma Data Management is the CDE layer that Design Collaboration, Model Coordination, reviews and issues all plug into.
 
 ### 4. Contractor and Trade Models
 
-**Meaning.** Contractor models, also called **trade models**, are developed by contractors and subcontractors for construction, fabrication, installation, and sequencing. In the diagram, they are shown below the CDE, feeding upward into the coordination workflow. They often include Mechanical, Plumbing, Electrical, and Fire.
-
-**Why this matters.** A design model may show design intent, but a contractor/trade model shows how the work will actually be fabricated and installed. This is especially important for MEP services, steelwork, fire protection, and other coordinated systems.
-
-**Autodesk workflow connection.** Trade models may be authored in Revit or specialist fabrication tools, then shared into the CDE and reviewed in [Model Coordination](#5-model-coordination) or Navisworks. They form a major part of construction-stage coordination.
-
-**Simple example.** A mechanical design model may show the intended duct route. The mechanical contractor's trade model may show actual duct sections, fittings, hangers, access panels, fabrication splits, and installation detail.
+Design intent is one thing; building it is another. The trade contractors — mechanical, plumbing, electrical, fire — build their own models for fabrication, installation and sequencing, and these run far more detailed than the design versions: real duct sections, fittings, hangers, access panels, fabrication splits. On the diagram they feed up into the CDE from below. Authored in Revit or specialist fabrication tools, they're where construction-stage coordination really bites.
 
 ### 5. Model Coordination
 
-**Meaning.** Model Coordination is the process of checking shared models for clashes, access problems, clearance issues, and coordination risks. In the diagram, it is shown above the CDE near the transition from construction coordination toward the federated model.
-
-**Why this matters.** Model Coordination helps replace unmanaged manual coordination with a trackable workflow. Problems can become **Issues**, **RFIs**, and assigned actions.
-
-> **Clash detection is not the whole workflow. Clash detection is one quality-control activity inside the wider BIM coordination workflow.**
-
-**Autodesk workflow connection.** Autodesk Forma Model Coordination can detect clashes from shared models, group coordination problems, and connect them to Issues. Navisworks can still be used for deeper desktop-based analysis, viewpoints, reports, and advanced clash review — but Forma improves team visibility and cloud collaboration. See [Forma Model Coordination](#forma-model-coordination).
-
-**Simple example.** A duct clashes with a beam. The clash is detected in Model Coordination. A coordination Issue is created and assigned. The mechanical contractor updates the duct route and republishes the model.
+Here the shared models get checked against each other — clashes, clearances, access, the lot. The value isn't the clash list itself; it's that each problem becomes a tracked issue or RFI with someone's name on it, instead of a manual exercise nobody owns. And it's worth repeating the thing people most often get wrong: clash detection is *one* quality-control step inside coordination, not the whole of it. Autodesk's Forma Model Coordination runs the detection in the cloud and ties clashes to issues; Navisworks still earns its keep for deeper desktop analysis, viewpoints and reports.
 
 ### 6. Federated Model
 
-**Meaning.** A federated model is a combined model set made from multiple discipline and trade models. In the diagram, it is shown at the right side, after the CDE and Model Coordination workflow. It is not usually one single authored model — it is a coordinated assembly of separate models brought together for review, handover, and operations.
-
-> **The federated model is the central object of coordination.** (Use "Federated Model" — not "Confederated Model.")
-
-**Why this matters.** The federated model gives the project team a single coordinated view of the building information. It supports construction review, handover, facilities management, asset data, and future operational use.
-
-**Autodesk workflow connection.** In Navisworks, a federated model is commonly created by appending multiple NWC or model files into an NWF. In Forma / ACC, the same concept appears through cloud-based model aggregation, coordination spaces, and shared model review. See [Revit to Navisworks workflow](#revit-to-navisworks-workflow).
-
-**Simple example.** Architecture, structure, mechanical, electrical, plumbing, fire, civil, and contractor trade models are combined into one review environment so the project team can inspect the whole building system together.
+The federated model is all those separate discipline and trade models referenced together into one coordinated view — not a single authored file, but an assembly. (Federated, not *confederated* — a small slip that trips people up.) It's what lets the team see the whole building at once, and it carries through from construction review into handover and operations. In Navisworks you build it by appending NWCs into an NWF; in Forma / ACC the same idea appears as cloud model aggregation and shared coordination spaces.
 
 ---
 
