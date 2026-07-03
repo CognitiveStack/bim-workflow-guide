@@ -10,4 +10,4 @@ Planned contents:
 - Example clashes and how they are resolved as issues.
 - How coordinated information flows to construction and handover.
 
-Each step will map back to the stages in the [workflow guide](../../docs/guide.md).
+Each step will map back to the stages in the [workflow guide](../../README.md).

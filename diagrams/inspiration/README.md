@@ -12,7 +12,7 @@ This folder holds the **third-party reference image** that inspired this project
 
 ## Why it's here
 
-This is the diagram that inspired the modernized [Autodesk Coordination Workflow](../revit/exports/ad-coordination-workflow-v06.png) built in this repo. The full personal account of how it was adapted and modernized is in the [guide](../../docs/guide.md#origin-story).
+This is the diagram that inspired the modernized [Autodesk Coordination Workflow](../revit/exports/ad-coordination-workflow-v06.png) built in this repo. The full personal account of how it was adapted and modernized is in the [README origin story](../../README.md#origin-story).
 
 ## Credits
 

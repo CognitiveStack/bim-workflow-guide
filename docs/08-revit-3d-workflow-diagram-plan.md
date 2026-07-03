@@ -123,8 +123,8 @@ Place markers for: 1, 2, 3, 4.1, 4.2, 5, 6, 7, 8, 8.1, 8.2, 9, 10 — positions 
 
 ## How this connects back to the repo
 
-- The **exported Revit images** are the primary workflow illustration, embedded in the README and in `docs/guide.md`.
-- Keep block names, colors, and callout numbers aligned across: the README, `docs/guide.md`, and this Revit model.
+- The **exported Revit images** are the primary workflow illustration, embedded in the README (the single-page guide).
+- Keep block names, colors, and callout numbers aligned across: the README and this Revit model.
 
 ## Build notes
 
