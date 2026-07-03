@@ -103,7 +103,7 @@ This is how the consultant teams share work without the project dissolving into 
 
 ### <img src="diagrams/callouts/3.png" alt="3" height="28"> Common Data Environment
 
-The CDE is the shared, controlled home for everything on the project — models, drawings, packages, reviews, issues, RFIs, coordination records, published exports — and it's the blue spine running the length of the diagram. Its whole reason to exist is to replace the usual scatter of emails, local folders, USB sticks and spreadsheets with one place the team can trust. But it pays to be precise about what it does: the CDE stores, versions, routes and records information; it doesn't fix anything. People fix the models. In Autodesk terms, Forma Data Management is the CDE layer that Design Collaboration, Model Coordination, reviews and issues all plug into.
+The CDE is the shared, controlled home for everything on the project — models, drawings, packages, reviews, issues, RFIs, coordination records, published exports — and it's the blue spine running the length of the diagram. Its whole reason to exist is to replace the usual scatter of emails, local folders, USB sticks and spreadsheets with one place the team can trust. But it pays to be precise about what it does: the CDE stores, versions, routes and records information; it doesn't fix anything. People fix the models. In Autodesk terms, Forma Data Management is the CDE layer that Design Collaboration, Model Coordination, reviews and issues all plug into. And a well-run CDE is more than one folder: under ISO 19650 — and its South African adoption, SANS 19650 — information moves through defined states as it matures, from Work in Progress to Shared to Published.
 
 <a id="4-contractor-and-trade-models"></a>
 

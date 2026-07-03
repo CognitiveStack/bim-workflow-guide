@@ -62,6 +62,8 @@ The models are published into Autodesk Forma, where **Design Collaboration** han
 
 *The Common Data Environment in Autodesk Forma, organised to ISO 19650 / SANS 19650 — Work in Progress → Shared → Published.*
 
+That folder structure isn't arbitrary — it follows ISO 19650 (and its South African adoption, SANS 19650), the standard for managing information in a CDE. Work moves through three states as it matures: **Work in Progress**, each discipline's own unshared working area; **Shared**, checked and released for the other disciplines to coordinate against; and **Published**, formally approved and issued as the authoritative copy. Structured this way, Forma keeps one version of the truth and stays audit-ready — which matters for a public building like a fire station.
+
 ![Design Collaboration in Forma](images/06-forma-design-collaboration.png)
 
 *Design Collaboration in Forma — each discipline publishing and consuming coordinated packages on a shared timeline.*
