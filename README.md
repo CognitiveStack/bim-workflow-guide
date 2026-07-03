@@ -63,7 +63,7 @@ I'll be honest: my Revit skills aren't advanced enough to model this by hand. Wh
 
 ![Autodesk Coordination Workflow](diagrams/revit/exports/ad-coordination-workflow-v06.png)
 
-*Autodesk Coordination Workflow — a Revit-generated 3D teaching diagram showing consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model. It was created in Revit as a conceptual teaching diagram — **not a real building model** — then exported as PNG (see [versioning & exports](docs/versioning-and-exports.md)).*
+*Autodesk Coordination Workflow — a Revit-generated 3D teaching diagram showing consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model. It was created in Revit as a conceptual teaching diagram — **not a real building model** — then exported as PNG.*
 
 The overview shows how project information flows through a modern Autodesk coordination workflow. Consultant models are created during design, shared through **Design Collaboration**, managed in the **Common Data Environment**, checked through **Model Coordination**, and eventually contribute to a **Federated Model** that supports construction review, handover, and operations.
 
@@ -75,50 +75,11 @@ The diagram is intentionally simplified. It does not show every possible Autodes
 
 ## How to read it
 
-### Clash detection is not the whole workflow
+Read it left to right, across the three lifecycle zones. Design asks what we should build, construction asks how we actually build it, and operation asks how we run and maintain it once it's handed over. Two streams of models feed the blue Common Data Environment running down the middle — the consultants' design models flowing in from the left, and the contractors' more detailed trade models joining further along.
 
-A common beginner mistake is to treat BIM coordination as if it *is* clash detection. It isn't — clash detection is one quality-control activity inside a much wider, iterative workflow:
+The one thing worth slowing down for is that this is a loop, not a pipeline. The obvious reading — models flow in, get checked, flow out — misses the point. Model Coordination doesn't fix anything; it *finds* things. The real work happens when a clash becomes an issue or an RFI, goes back to whoever owns that model, gets fixed at the source, and is republished for another pass. Clash detection is one moment in that cycle, not the whole of coordination.
 
-```
-BIM Workflow
-└─ BIM Coordination
-   └─ Federated Models
-      └─ MEP Coordination
-         └─ Clash Detection
-            └─ Issue Management
-               └─ Model Updates
-                  └─ Construction Support
-                     └─ As-Built / Owner Handover
-```
-
-### The three lifecycle zones
-
-The diagram flows left → right across three zones:
-
-| Zone | The question it asks |
-|---|---|
-| **Design** | What should we build? |
-| **Construction** | How do we actually build it? |
-| **Operation** | How do we run and maintain it after handover? |
-
-(How the model's role changes across these phases is covered in [Construction vs Operations](#construction-vs-operations).)
-
-### Two kinds of models feed the CDE
-
-- **Consultant models** (design side): Civil, Architectural, Structural, Mechanical, Electrical, Plumbing, Fire.
-- **Contractor / trade models** (construction side): the trades that build the MEP + fire systems — Mechanical, Plumbing, Electrical, Fire.
-
-### It is an iterative workflow, not a one-way file transfer
-
-The single most important thing about this diagram: **coordination is a loop, not a pipeline.** Model Coordination finds problems; **people fix the source models**; the fixed models are republished to the CDE and re-coordinated until the problem is verified as resolved:
-
-> **Find problem → Raise Issue or RFI → Assign responsibility → Update source model → Republish to CDE → Re-coordinate → Verify resolution**
-
-The **RFI** and **ISSUES** loops in the diagram are what carry problems back to the model authors — see [the coordination feedback loop](#the-coordination-feedback-loop).
-
-### Why the name is "Autodesk" and not a brand
-
-The original contractor branding (from the Turner / White Plains Hospital infographic) has been removed, but the title deliberately keeps *Autodesk*: the two cloud drivers in the diagram — Design Collaboration and Model Coordination — are Autodesk Forma products. That doesn't lock out open standards; models in **IFC** format (e.g. from Tekla) still interoperate. The point is that the *cloud coordination process itself* is Autodesk-driven.
+As for the name: I kept "Autodesk" on purpose. A Common Data Environment is a generic BIM idea, but the two blue workflows sitting on the spine — Design Collaboration and Model Coordination — are Autodesk Forma products. Open formats like IFC still flow in from tools such as Tekla; it's the cloud coordination itself that's Autodesk-driven.
 
 ---
 
