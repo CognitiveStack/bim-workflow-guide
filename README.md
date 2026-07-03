@@ -127,38 +127,11 @@ The federated model is all those separate discipline and trade models referenced
 
 ## The coordination feedback loop
 
-### The BIM coordination workflow is not linear
+The mistake is to read the diagram as a conveyor belt — models in, coordinated model out. It's really a loop, and the loop is the whole point. Model Coordination doesn't resolve anything on its own; it surfaces problems. Each real one becomes either an *issue* or an *RFI*, gets handed to whoever owns the model, is fixed at the source, and is republished for the next pass — and that repeats until the problem is genuinely gone.
 
-Coordination is **iterative**. Model Coordination finds clashes and coordination risks. Important problems become **Issues** or **RFIs**. The responsible team updates the source model. The model is republished into the CDE. The model is re-coordinated. The loop repeats until the issue is resolved.
+There are two of these loops, running in opposite directions. The RFI loop heads back to the *design* side: when coordination throws up a question only the design team can settle — say a duct that seems to need a new penetration through a structural beam — nobody on site just decides that. It goes back as an RFI, the consultants rule on it and revise the design if they must, and the answer flows back in through Design Collaboration. The Issues loop heads back to the *construction* side: a duct fouling a cable tray isn't a design question, it's a trade clash, so it's assigned to the trade that owns it, they adjust their model, and it re-coordinates.
 
-> **Find → Raise → Fix → Republish → Re-coordinate**
-
-The diagram shows two feedback loops: the **RFI loop** and the **Issues loop**.
-
-### RFI loop
-
-A coordination review identifies a question that needs design input. The **RFI** goes back to the consultants / design model authors. The consultants respond, revise the design if needed, and republish through [Design Collaboration](#2-design-collaboration) into the CDE.
-
-**Example:** A duct route appears to require a beam penetration. The contractor cannot approve this alone. The question becomes an RFI to the structural / design team.
-
-### Issues loop
-
-Model Coordination identifies a construction or trade coordination problem. The **Issue** goes back to the contractor / trade model authors. The trade team updates the model and republishes it into the CDE.
-
-**Example:** A mechanical duct clashes with a cable tray. The issue is assigned to the relevant trade team. The trade model is updated and re-coordinated.
-
-### The loops return to the model authors, not just the CDE
-
-The return arrows should **not** be explained as returning to the CDE only. The CDE stores and manages information, but **people fix models**. The loops return to the model authors. Their updated models then flow forward again into the CDE.
-
-| Thing | What it does |
-|---|---|
-| **CDE** | Stores, versions, routes, and records information |
-| **Model authors** | Fix the source models |
-| **Model Coordination** | Tests the shared / federated model environment |
-| **Issues and RFIs** | Create accountable feedback loops |
-
-> **Find → Raise → Fix → Republish → Re-coordinate → Verify**
+The one thing worth being pedantic about is that these loops return to *people*, not to the cloud. It's tempting to draw the return arrow landing on the CDE, but the CDE doesn't fix anything — it stores, versions and routes. The fix happens in someone's model, and only then does the corrected version flow forward into the CDE again. Find, raise, fix, republish, re-coordinate, verify.
 
 ---
 
