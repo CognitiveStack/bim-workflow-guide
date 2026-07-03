@@ -2,8 +2,6 @@
 
 A single-page guide to the modern, **Autodesk-centric BIM coordination workflow** — built around a Revit-generated teaching diagram. It covers Revit, Forma / ACC, Design Collaboration, Model Coordination, Navisworks, the Common Data Environment, Issues, RFIs, and federated-model handover.
 
-> *Revit produces the diagram. Markdown explains the diagram. GitHub versions the learning system.*
-
 ## Contents
 
 1. [Origin story](#origin-story) — how and why I built this
@@ -27,21 +25,15 @@ A single-page guide to the modern, **Autodesk-centric BIM coordination workflow*
 
 ## Origin story
 
-*This section is written in the first person — my personal account of where this project came from and how I modernized it.*
-
 ### Why I made this
 
-I built the Autodesk Coordination Workflow diagram to teach myself — and then others — how a modern BIM coordination workflow actually fits together. I kept hearing "BIM coordination" used as if it just meant clash detection, and I wanted a single picture that showed the whole thing: design, construction, operation, and the cloud that now runs through all of it.
+I built the Autodesk Coordination Workflow diagram to teach myself how a modern BIM coordination workflow actually fits together. I kept hearing "BIM coordination" used as if it just meant clash detection, and I wanted a single picture that showed the whole thing: design, construction, operation, and the cloud that now runs through all of it.
 
 ### The image that inspired me
 
 The spark was a diagram created by **Jeffrey Pinheiro — The Revit Kid** — in his video ["3D Coordination Explained"](https://www.youtube.com/watch?v=2JOGvY9YplY&t=2991s), part of his *BIM After Dark* series. His diagram illustrates the coordination workflow using Turner's White Plains Hospital project as the worked example:
 
 ![The original BIM coordination diagram that inspired this project](diagrams/inspiration/revit-kid-bim-coordination-workflow-original.png)
-
-*Original diagram by Jeffrey Pinheiro (The Revit Kid), from "3D Coordination Explained" — using Turner's White Plains Hospital [MOD IV] project as the example. (See [full credit](diagrams/inspiration/README.md). This is a cleaned screenshot; the owner released it publicly and I've kept it clearly attributed.)*
-
-I loved how it turned an abstract process into a 3D story you could actually follow. I wanted to build my own version — but modernized for how the work is done today.
 
 ### What the original showed
 
