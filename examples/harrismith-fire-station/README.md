@@ -22,6 +22,8 @@ Everything downstream has to sit in the same place in space, so the project star
 
 *A South-African wrinkle worth its own note: the Lo survey grid is left-handed while Revit/CAD is right-handed. Getting that flip right is what keeps the model on the correct spot on Earth.*
 
+→ **Drill-down:** [how Revit geolocates onto the Civil 3D survey (shared coordinates)](shared-coordinates.md).
+
 ### 2. Architecture — the Revit model
 
 The architectural model is authored in Revit on those coordinates, and becomes the first shape of the building the other disciplines design against. On the diagram it's a [Consultant Model ①](../../README.md#1-coordinated-models), shared through [Design Collaboration ②](../../README.md#2-design-collaboration).

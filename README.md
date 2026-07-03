@@ -214,7 +214,7 @@ Separate reference and appendix material:
 - [Diagram exports & credit](diagrams/revit/README.md) · [Inspiration & credit](diagrams/inspiration/README.md)
 - [PRD](PRD.md) — product requirements
 - [Related CogStack repos](links/related-repos.md) · [Learning resources](links/learning-resources.md) *(coming soon)*
-- Examples: [Harrismith Fire Station — worked example](examples/harrismith-fire-station/README.md) · [BIM Clash Visual Atlas](examples/bim-clash-visual-atlas/README.md) *(coming soon)*
+- Examples: [Harrismith Fire Station — worked example](examples/harrismith-fire-station/README.md) — incl. [shared-coordinates deep-dive](examples/harrismith-fire-station/shared-coordinates.md) · [BIM Clash Visual Atlas](examples/bim-clash-visual-atlas/README.md) *(coming soon)*
 
 ### Versioning strategy
 
