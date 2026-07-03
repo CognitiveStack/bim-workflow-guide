@@ -137,30 +137,9 @@ The one thing worth being pedantic about is that these loops return to *people*,
 
 ## Forma Model Coordination
 
-### Collaboration-first, not just "Navisworks in the cloud"
+It's easy to file Forma Model Coordination under "Navisworks, but in the cloud," and that undersells it. Navisworks is a desktop workbench — where you go to analyse clashes deeply, build viewpoints, and produce reports. Forma is a shared environment — where the whole team sees the same coordination problems, owns them, and tracks them to resolution. They answer different questions: Navisworks asks *where exactly are the clashes and how do I dig into them*, while Forma asks *how do we make sure everyone sees, owns, and closes them out*.
 
-Forma Model Coordination is cloud-based model review and clash coordination. It is **not just a replacement for Navisworks** — it is **collaboration-first**.
-
-- **Navisworks** is stronger as a **desktop clash-analysis workbench**.
-- **Forma Model Coordination** is stronger as a **shared cloud coordination environment**.
-
-### Automatic clash detection, human judgement
-
-Forma Model Coordination can **automatically detect clashes** once models are uploaded into a configured coordination space. However, **human judgement is still required**. The software can identify possible conflicts, but the coordinator must decide:
-
-- whether the clash is real
-- who owns it
-- whether it should become an Issue
-- whether an RFI is needed
-- whether the fix is acceptable
-- whether the model should be re-coordinated
-
-### Key distinction
-
-| Tool | The question it asks |
-|---|---|
-| **Navisworks** | Where exactly are the clashes and how do I analyse them deeply? |
-| **Forma Model Coordination** | How do we make sure the whole team sees, owns, tracks, and resolves coordination problems? |
+The clash detection itself is automatic — upload the models into a configured coordination space and Forma flags the conflicts. But finding a clash and resolving one aren't the same thing, and the software only does the first. A person still decides whether the clash is even real, who owns it, whether it warrants an issue or a full RFI, whether the proposed fix actually holds, and whether the models need another pass. The tool surfaces; the coordinator judges.
 
 ---
 
