@@ -145,25 +145,17 @@ The clash detection itself is automatic — upload the models into a configured 
 
 ## Revit to Navisworks workflow
 
-### Key idea
+Revit is where the model is authored and changed; Navisworks is where the federated model is reviewed and clashes are detected. Three file types carry the model between them: an NWC is a snapshot exported from Revit, an NWF is the Navisworks working file that references those NWCs, and an NWD is a published, frozen version.
 
-**Revit is where the model is authored and changed. Navisworks is where the federated model is reviewed and clashes are detected.**
+The bit people get wrong is treating the NWC as if it were the model. It isn't — it's only a coordination snapshot of the RVT, which stays the source of truth. So when a clash turns up, you never edit the coordination file; you go back to Revit and re-export:
 
-- **NWC** files are exported snapshots / caches from Revit.
-- **NWF** is the Navisworks working file that references the NWC files.
-- **NWD** is a published, frozen model.
+1. Open the right Revit discipline model and make the change.
+2. Export a fresh NWC.
+3. Overwrite the old NWC in the Navisworks cache folder.
+4. Refresh the Navisworks NWF and rerun the clash test.
+5. Confirm the clash is actually resolved.
 
-### Workflow
-
-1. Open the correct Revit discipline model.
-2. Make the design or coordination change.
-3. Export a fresh NWC.
-4. Overwrite the old NWC in the Navisworks cache folder.
-5. Open or refresh the Navisworks NWF.
-6. Rerun the clash test.
-7. Confirm whether the clash is resolved.
-
-### Folder logic
+A sane folder layout keeps those roles apart:
 
 | Folder | Holds |
 |---|---|
@@ -171,9 +163,7 @@ The clash detection itself is automatic — upload the models into a configured 
 | `/navisworks/02_NWC_Cache/` | exported NWC snapshots |
 | `/navisworks/03_NWF_Working/` | Navisworks working files |
 
-### Do not treat the NWC as the source model
-
-The **RVT is the authoring source.** The NWC is an **exported coordination snapshot**. If a clash is found, you fix it in Revit and re-export the NWC — you never "fix" the NWC directly. Navisworks is a desktop workbench; Forma Model Coordination is collaboration-first — they complement each other (see [Forma Model Coordination](#forma-model-coordination)).
+Navisworks is the desktop workbench for deep, detailed analysis; Forma Model Coordination is the collaboration-first cloud side. They complement each other rather than compete.
 
 ---
 
