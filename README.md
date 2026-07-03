@@ -117,7 +117,7 @@ Design intent is one thing; building it is another. The trade contractors — me
 
 Here the shared models get checked against each other — clashes, clearances, access, the lot. The value isn't the clash list itself; it's that each problem becomes a tracked issue or RFI with someone's name on it, instead of a manual exercise nobody owns. And it's worth repeating the thing people most often get wrong: clash detection is *one* quality-control step inside coordination, not the whole of it. Autodesk's Forma Model Coordination runs the detection in the cloud and ties clashes to issues; Navisworks still earns its keep for deeper desktop analysis, viewpoints and reports.
 
-This is the stage I reached on the Harrismith fire station I've been developing — federating the structural and MEP models in Navisworks, then pushing them into Forma, which is where you find out whether the duct routes and the beams have quietly been disagreeing. The [Harrismith worked example](examples/harrismith-fire-station/README.md) walks that whole toolchain.
+This is the stage I reached on the Harrismith fire station I've been developing. Federating the structural and MEP models — first in Navisworks, then in Forma — is exactly how I caught a service duct running straight through a structural beam: flagged on screen, weeks before it could have become expensive rework on site. The [Harrismith worked example](examples/harrismith-fire-station/README.md) walks that whole toolchain.
 
 <a id="6-federated-model"></a>
 
