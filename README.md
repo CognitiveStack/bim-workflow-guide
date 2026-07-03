@@ -185,13 +185,7 @@ That's also where **MEP+O** comes from — mechanical, electrical and plumbing *
 
 ## Non-obvious coordination risks
 
-### Beginner vs professional coordination
-
-Beginner clash detection asks: *Do the objects touch?*
-
-Professional coordination asks: *Can this be built, accessed, maintained, replaced, certified, and operated?*
-
-The clashes below are **not just geometry clashes**. They are access, maintenance, replacement, performance, documentation, and sequence clashes.
+Beginner clash detection asks one question — *do the objects touch?* Real coordination asks a harder one: *can this actually be built, accessed, maintained, replaced, certified, and operated?* Most of what bites on site isn't a geometry clash at all; it's a clash of access, maintenance, sequence, or paperwork. A sampling:
 
 - **Duct fits geometrically but has no maintenance access.** The duct may not clash with structure, but dampers, access doors, actuators, sensors, and inspection panels may be unreachable.
 - **Pipe passes through wall but no sleeve/opening was coordinated.** The route may be intended, but the wall needs a coordinated opening, sleeve, fire stopping, acoustic treatment, and responsibility assignment.
@@ -204,19 +198,7 @@ The clashes below are **not just geometry clashes**. They are access, maintenanc
 - **Equipment cannot be replaced later because access space is blocked.** Installable during construction but impossible to remove or replace after walls, doors, pipework, or ceilings are complete.
 - **Installation sequence is impossible.** The final model may appear clash-free, but the actual installation order may not be feasible.
 
-### Catch it digitally, before site
-
-"Catch it in the software, not on site" does **not** mean builders are careless. Experienced builders usually will not knowingly build a duct through a beam. The point is that **late discovery is expensive**.
-
-| In software, a clash may require | On site, the same clash may cause |
-|---|---|
-| discussion | stopped work |
-| model edit | RFI |
-| revised drawing | redesign |
-| issue update | wasted prefabricated material |
-| re-coordination | rework, delay, cost claim, trade resequencing, contractual tension |
-
-> **Catch coordination problems digitally before they become physical site problems.**
+None of this means site crews are careless — an experienced builder isn't going to knowingly run a duct through a beam. The point is timing. Caught in the model, a clash costs a conversation, an edit, a revised drawing, and another coordination pass. Caught on site, the same clash costs stopped work, an RFI, wasted prefabrication, rework and delay, and maybe a cost claim with some contractual friction. Same problem, wildly different price — which is the whole argument for finding it digitally, first.
 
 ---
 
