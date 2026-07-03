@@ -87,27 +87,39 @@ As for the name: I kept "Autodesk" on purpose. A Common Data Environment is a ge
 
 The six numbered stations on the diagram, taken one at a time.
 
-### 1. Coordinated Models
+<a id="1-coordinated-models"></a>
+
+### <img src="diagrams/callouts/1.png" alt="1" height="28"> Coordinated Models
 
 Every discipline authors its own model — civil, architecture, structure, and the MEP trades — usually in Revit, with site work often coming from Civil 3D. Before any of it moves downstream, the design team pulls those models together and checks they roughly line up. Catching a conflict here, while it still costs nothing more than rerouting a duct, beats discovering it after a contractor has priced or fabricated around it. This is the first, lightest pass at *does this all actually fit?*
 
-### 2. Design Collaboration
+<a id="2-design-collaboration"></a>
+
+### <img src="diagrams/callouts/2.png" alt="2" height="28"> Design Collaboration
 
 This is how the consultant teams share work without the project dissolving into a pile of emailed file copies. Rather than swapping random exports, each team publishes model packages the others can review and pull in — the architect publishes, structure consumes the update, MEP then coordinates against the latest design intent. In Autodesk's world it's the Forma / ACC Design Collaboration workflow, shown on the diagram as the blue arrow feeding down into the CDE from the design side.
 
-### 3. Common Data Environment
+<a id="3-common-data-environment"></a>
+
+### <img src="diagrams/callouts/3.png" alt="3" height="28"> Common Data Environment
 
 The CDE is the shared, controlled home for everything on the project — models, drawings, packages, reviews, issues, RFIs, coordination records, published exports — and it's the blue spine running the length of the diagram. Its whole reason to exist is to replace the usual scatter of emails, local folders, USB sticks and spreadsheets with one place the team can trust. But it pays to be precise about what it does: the CDE stores, versions, routes and records information; it doesn't fix anything. People fix the models. In Autodesk terms, Forma Data Management is the CDE layer that Design Collaboration, Model Coordination, reviews and issues all plug into.
 
-### 4. Contractor and Trade Models
+<a id="4-contractor-and-trade-models"></a>
+
+### <img src="diagrams/callouts/4.png" alt="4" height="28"> Contractor and Trade Models
 
 Design intent is one thing; building it is another. The trade contractors — mechanical, plumbing, electrical, fire — build their own models for fabrication, installation and sequencing, and these run far more detailed than the design versions: real duct sections, fittings, hangers, access panels, fabrication splits. On the diagram they feed up into the CDE from below. Authored in Revit or specialist fabrication tools, they're where construction-stage coordination really bites.
 
-### 5. Model Coordination
+<a id="5-model-coordination"></a>
+
+### <img src="diagrams/callouts/5.png" alt="5" height="28"> Model Coordination
 
 Here the shared models get checked against each other — clashes, clearances, access, the lot. The value isn't the clash list itself; it's that each problem becomes a tracked issue or RFI with someone's name on it, instead of a manual exercise nobody owns. And it's worth repeating the thing people most often get wrong: clash detection is *one* quality-control step inside coordination, not the whole of it. Autodesk's Forma Model Coordination runs the detection in the cloud and ties clashes to issues; Navisworks still earns its keep for deeper desktop analysis, viewpoints and reports.
 
-### 6. Federated Model
+<a id="6-federated-model"></a>
+
+### <img src="diagrams/callouts/6.png" alt="6" height="28"> Federated Model
 
 The federated model is all those separate discipline and trade models referenced together into one coordinated view — not a single authored file, but an assembly. (Federated, not *confederated* — a small slip that trips people up.) It's what lets the team see the whole building at once, and it carries through from construction review into handover and operations. In Navisworks you build it by appending NWCs into an NWF; in Forma / ACC the same idea appears as cloud model aggregation and shared coordination spaces.
 
