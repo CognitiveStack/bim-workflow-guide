@@ -169,15 +169,9 @@ Navisworks is the desktop workbench for deep, detailed analysis; Forma Model Coo
 
 ## Construction vs Operations
 
-**Construction is about delivering and building the project. Operations is about running and maintaining the building after handover.**
+Construction and operations get lumped together as "the bit after design," but they're different jobs. Construction is about *delivering* the building — contractors and their subcontractors, trade models, shop drawings, sequencing and fabrication, the RFIs and issues that come with actually installing things, inspections, commissioning, and the as-built updates that record what really got built. Operations is about *running* it once the keys change hands — facilities management, asset registers and tags, maintenance schedules, equipment data, warranties and manuals, commissioning records, lifecycle cost, building performance, and eventually the digital twin.
 
-**Construction involves:** contractors, subcontractors, trade models, shop drawings, RFIs, Issues, sequencing, fabrication, inspections, commissioning, as-built updates.
-
-**Operations involves:** facilities management, asset registers, maintenance schedules, equipment data, warranties, manuals, commissioning records, asset tags, lifecycle cost, digital twins, building performance.
-
-### The model's role changes across the lifecycle
-
-Operations can have a model, but it is not usually another design discipline model. It is better understood as an **asset / facilities layer** of the BIM lifecycle.
+Operations can carry a model too, but it isn't another discipline model — it's better thought of as an asset and facilities layer sitting on top of everything that was built. The clearest way to see the shift is to ask what the model is *for* at each stage:
 
 | Phase | What the model says |
 |---|---|
@@ -185,7 +179,7 @@ Operations can have a model, but it is not usually another design discipline mod
 | **Construction** | This is what we are coordinating and installing. |
 | **Operation** | This is the asset we now need to manage. |
 
-**MEP+O** means mechanical / electrical / plumbing **plus operations**. It extends MEP thinking beyond design and installation into maintainability, commissioning, asset data, and lifecycle management.
+That's also where **MEP+O** comes from — mechanical, electrical and plumbing *plus operations* — stretching MEP thinking past design and installation into maintainability, commissioning, asset data, and whole-life management.
 
 ---
 
