@@ -1,0 +1,164 @@
+# BIM Workflow Stages — structured seed (source of truth for the Notion mirror)
+# ---------------------------------------------------------------------------------
+# This file is the machine-readable representation of the guide's six coordination
+# callouts. It is consumed one-way by the `notion` integration repo, which mirrors it
+# into the "BIM Workflow Stages" Notion database (read-only projection). Editing the
+# workflow content? Edit it HERE (and the prose in README.md) — Notion never edits back.
+#
+# CONTRACT: the sync joins on `stage_key` (stable, never reused). `source_link` is
+# derived by the sync as `<source.repo_url>/blob/<branch>/<source.doc>#<anchor>`;
+# provenance fields (Source Commit, Last Synced, Managed By, Status) are stamped by the
+# sync, NOT authored here. See the notion repo's PRD.md §7 for the full schema.
+
+schema_version: 1
+database: BIM Workflow Stages
+
+source:
+  repo: CognitiveStack/bim-workflow-guide
+  repo_url: https://github.com/CognitiveStack/bim-workflow-guide
+  doc: README.md
+  branch: main
+  diagram_version_default: v06   # diagrams/revit/exports/ad-coordination-workflow-v06.png
+
+# Controlled vocabularies (mirror the Notion select / multi-select options in PRD §7.2).
+enums:
+  zone: [Design, Construction, Operation]           # transitional stages use "A → B"
+  iso19650: [WIP, Shared, Published]                # ISO 19650 / SANS 19650 CDE states
+  status: [Synced, Draft, Needs Review, Deprecated]
+
+stages:
+  - stage_key: stage-01
+    number: 1
+    name: Coordinated Models
+    zone: Design
+    anchor: "1-coordinated-models"
+    description: >-
+      Every discipline authors its own model — civil, architecture, structure and the
+      MEP trades — usually in Revit, with site work often coming from Civil 3D. Before
+      anything moves downstream the design team pulls those models together and checks
+      they roughly line up. This is the first, lightest pass at "does this all actually
+      fit?" — catching a conflict here, while it still costs nothing more than rerouting
+      a duct, beats discovering it after a contractor has priced or fabricated around it.
+    tools: [Revit, Civil 3D]
+    input: Individual discipline models authored per discipline (civil, architecture, structure, MEP)
+    output: A first-pass, roughly-aligned set of design models
+    responsible: [Design team]
+    iso19650: [WIP, Shared]
+    diagram_version: v06
+    status: Draft
+    notes: >-
+      First of the guide's six callouts. The Harrismith worked example enters here via
+      Civil (survey coordinates / shared coordinates) → Architecture → Structure → MEP.
+
+  - stage_key: stage-02
+    number: 2
+    name: Design Collaboration
+    zone: Design
+    anchor: "2-design-collaboration"
+    description: >-
+      How the consultant teams share work without the project dissolving into a pile of
+      emailed file copies. Rather than swapping random exports, each team publishes model
+      packages the others can review and pull in — the architect publishes, structure
+      consumes the update, MEP then coordinates against the latest design intent. In
+      Autodesk's world it is the Forma / ACC Design Collaboration workflow — the blue
+      arrow feeding down into the CDE from the design side.
+    tools: [Autodesk Forma (Design Collaboration), Revit]
+    input: Authored discipline models (Work in Progress)
+    output: Published, reviewable model packages shared into the CDE
+    responsible: [Design team, BIM Coordinator]
+    iso19650: [Shared]
+    diagram_version: v06
+    status: Draft
+    notes: Forma was formerly ACC (Autodesk Construction Cloud).
+
+  - stage_key: stage-03
+    number: 3
+    name: Common Data Environment
+    zone: Design → Construction
+    anchor: "3-common-data-environment"
+    description: >-
+      The CDE is the shared, controlled home for everything on the project — models,
+      drawings, packages, reviews, issues, RFIs, coordination records, published exports —
+      and it is the blue spine running the length of the diagram. Be precise about what it
+      does: the CDE stores, versions, routes and records information; it does not fix
+      anything — people fix the models. In Autodesk terms, Forma Data Management is the CDE
+      layer that Design Collaboration, Model Coordination, reviews and issues plug into.
+    tools: [Autodesk Forma (Data Management), Autodesk Construction Cloud]
+    input: Shared model packages, drawings, reviews, issues and RFIs
+    output: Versioned, routed, audit-ready information held at its ISO 19650 state
+    responsible: [Information Manager, BIM Coordinator]
+    iso19650: [WIP, Shared, Published]
+    diagram_version: v06
+    status: Draft
+    notes: >-
+      Under ISO 19650 — and its South African adoption, SANS 19650 — information moves
+      through defined states as it matures: Work in Progress → Shared → Published. The CDE
+      is the backbone of the workflow, not just a storage folder.
+
+  - stage_key: stage-04
+    number: 4
+    name: Contractor & Trade Models
+    zone: Construction
+    anchor: "4-contractor-and-trade-models"
+    description: >-
+      Design intent is one thing; building it is another. The trade contractors —
+      mechanical, plumbing, electrical, fire — build their own models for fabrication,
+      installation and sequencing, and these run far more detailed than the design
+      versions: real duct sections, fittings, hangers, access panels, fabrication splits.
+      On the diagram they feed up into the CDE from below. Authored in Revit or specialist
+      fabrication tools, they are where construction-stage coordination really bites.
+    tools: [Revit, Fabrication tools]
+    input: Design-intent models pulled from the CDE
+    output: Detailed trade / fabrication models fed back into the CDE
+    responsible: [Trade contractors]
+    iso19650: [WIP, Shared]
+    diagram_version: v06
+    status: Draft
+    notes: More detailed than the design models — for fabrication, installation and sequencing.
+
+  - stage_key: stage-05
+    number: 5
+    name: Model Coordination
+    zone: Construction
+    anchor: "5-model-coordination"
+    description: >-
+      Here the shared models get checked against each other — clashes, clearances, access,
+      the lot. The value is not the clash list itself; it is that each problem becomes a
+      tracked issue or RFI with someone's name on it. Clash detection is one quality-control
+      step inside coordination, not the whole of it. Autodesk's Forma Model Coordination
+      runs the detection in the cloud and ties clashes to issues; Navisworks still earns its
+      keep for deeper desktop analysis, viewpoints and reports.
+    tools: [Autodesk Forma (Model Coordination), Navisworks Manage]
+    input: Federated discipline and trade models
+    output: Tracked clash issues and RFIs, each assigned to an owner
+    responsible: [BIM Coordinator, Discipline owners, Trade owners]
+    iso19650: [Shared]
+    diagram_version: v06
+    status: Draft
+    notes: >-
+      The stage reached on the Harrismith fire station — federating structure + MEP in
+      Navisworks then Forma caught a service duct running straight through a structural
+      beam. Feeds the two feedback loops: RFI loop → design side, Issues loop → construction side.
+
+  - stage_key: stage-06
+    number: 6
+    name: Federated Model
+    zone: Construction → Operation
+    anchor: "6-federated-model"
+    description: >-
+      The federated model is all those separate discipline and trade models referenced
+      together into one coordinated view — not a single authored file, but an assembly.
+      (Federated, not confederated.) It lets the team see the whole building at once and
+      carries through from construction review into handover and operations. In Navisworks
+      you build it by appending NWCs into an NWF; in Forma / ACC the same idea appears as
+      cloud model aggregation and shared coordination spaces.
+    tools: [Navisworks Manage, Autodesk Forma]
+    input: Coordinated discipline and trade models
+    output: A federated model supporting construction review, handover and operations
+    responsible: [BIM Coordinator]
+    iso19650: [Published]
+    diagram_version: v06
+    status: Draft
+    notes: >-
+      Bridges into Operation — the same assembly supports the shift from "what we are
+      installing" to "the asset we now need to manage" (MEP+O).
