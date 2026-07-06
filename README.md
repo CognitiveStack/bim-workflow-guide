@@ -61,7 +61,7 @@ I'll be honest: my Revit skills aren't advanced enough to model this by hand. Wh
 
 ## The diagram
 
-![Autodesk Coordination Workflow](diagrams/revit/exports/ad-coordination-workflow-v06.png)
+![Autodesk Coordination Workflow](diagrams/revit/exports/ad-coordination-workflow-v07.png)
 
 *Autodesk Coordination Workflow — a Revit-generated 3D teaching diagram showing consultant models, contractor models, Design Collaboration, the Common Data Environment, Model Coordination, RFIs, Issues, and the Federated Model. It was created in Revit as a conceptual teaching diagram — **not a real building model** — then exported as PNG.*
 
