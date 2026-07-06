@@ -1,0 +1,24 @@
+name: Notify Notion sync
+
+# On every push to main, tell the private `notion` repo to re-sync + re-mirror,
+# so GitHub → Notion updates happen automatically per-commit (no manual run).
+# Requires secret NOTION_MIRROR_DISPATCH_TOKEN: a token allowed to POST to
+# repos/CognitiveStack/notion/dispatches (classic PAT with `repo`, or a
+# fine-grained PAT with Contents: write on CognitiveStack/notion).
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fire repository_dispatch → CognitiveStack/notion
+        run: |
+          curl -sfS -X POST \
+            -H "Authorization: Bearer ${{ secrets.NOTION_MIRROR_DISPATCH_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/CognitiveStack/notion/dispatches \
+            -d '{"event_type":"guide-updated"}'
